@@ -1,19 +1,39 @@
-nav{
+nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom:1pt solid darkslategray;
 }
-nav ul{
-    display: flex;
-    flex-direction: row;
-}
+
 nav ul li{
     display: inline-block;
     list-style: none;
-    padding-left: 5pt;
+    margin: 0 5pt;
+
 }
-#logo {
-    max-height: 40vmin;
-    max-width: 40vmin;
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
 }
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+@media (max-width: 1084px) {
+    .logo {
+        display: none;
+    }.links{
+    width: 100%;
+         }
+}
+
