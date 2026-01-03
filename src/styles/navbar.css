@@ -1,0 +1,19 @@
+nav{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding-left: 5pt;
+}
+#logo {
+    max-height: 40vmin;
+    max-width: 40vmin;
+}

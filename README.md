@@ -24,7 +24,7 @@ Wszystkie przykłady służą wyłącznie do nauki i analizy bezpieczeństwa.
 
 - HTML / CSS / JavaScript
 - (opcjonalnie) backend do celów demonstracyjnych
-- Przeglądarka i zdrowy rozsądekgit
+- Przeglądarka i zdrowy rozsądek
 
 ## Status
 
