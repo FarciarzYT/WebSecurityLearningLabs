@@ -1,0 +1,23 @@
+.boxes-container1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.boxes-container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.boxes-header{
+    font-weight: bold;
+    text-align: center;
+}
+.boxes-content{
+    background-color: gray;
+    text-align: center;
+    width: 33%;
+    height: 164pt;
+}
