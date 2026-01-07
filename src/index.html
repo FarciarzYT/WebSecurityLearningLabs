@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-
     <meta charset="UTF-8" />
     <title>Web Security Learning Labs</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="web-security-learning-labs" />
+    <meta name="description" content="Hands-on web security labs focused on real vulnerabilities." />
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <link rel="stylesheet" type="text/css" href="./styles/navbar.css" />
     <link rel="stylesheet" type="text/css" href="./styles/header.css" />
@@ -14,53 +12,63 @@
 </head>
 
 <body>
+
 <nav>
     <ul class="links">
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./models/HackBoxes.html">HackBoxes</a> </li>
+        <li><a href="./models/HackBoxes.html">HackBoxes</a></li>
         <li><a href="./models/about.html">About</a></li>
         <li><a href="./models/contact.html">Contact</a></li>
     </ul>
 </nav>
+
 <header>
-    <!--TODO:Nagranie Jako tło-->
     <div class="header-content">
-        <h1>
-            Web Security Learning Labs:
-        </h1>
-            <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </span>
+        <h1>Web Security Learning Labs</h1>
+        <span>
+            Hands-on labs focused on real web vulnerabilities.
+            No hints, no hand-holding, no AI-generated solutions.
+            Break things, understand why they broke, fix your mindset.
+        </span>
     </div>
 </header>
+
 <main class="boxes-container1">
     <header class="boxes-header">
-        <h1>
-            Test Your Knowledge in Web Security
-        </h1>
+        <h2>Start Breaking Web Applications</h2>
     </header>
+
     <div class="boxes-container2">
+
         <section class="boxes-content">
-            <h1>SQL Injection</h1>
-            <h3>Manipulowanie zapytaniami do bazy danych w celu przejęcia danych</h3>
+            <h3>SQL Injection</h3>
+            <p>
+                Exploit unsafe database queries to extract, modify or destroy data.
+                Learn why parameterized queries exist the hard way.
+            </p>
             <div></div>
         </section>
 
         <section class="boxes-content">
-            <h1>IDOR</h1>
-            <h3>Dostęp do cudzych zasobów przez zmianę identyfikatora</h3>
+            <h3>IDOR</h3>
+            <p>
+                Access resources that were never meant to be yours
+                by abusing broken access control and predictable identifiers.
+            </p>
             <div></div>
         </section>
 
         <section class="boxes-content">
-            <h1>XSS</h1>
-            <h3>Wstrzykiwanie złośliwego JavaScriptu do strony</h3>
+            <h3>XSS</h3>
+            <p>
+                Inject and execute malicious JavaScript in vulnerable applications.
+                Steal sessions, deface pages, understand trust boundaries.
+            </p>
             <div></div>
         </section>
+
     </div>
 </main>
 
-
 </body>
-
 </html>
