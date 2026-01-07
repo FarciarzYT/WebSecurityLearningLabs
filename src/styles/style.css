@@ -1,103 +1,112 @@
-body{
+body {
     font-family: Helvetica, sans-serif;
-    background-color: black;
-    color: white;
+    background-color: #0a0a0a;
+    color: #eaeaea;
+    margin: 0;
+    padding: 0;
 }
-/* === NAVBAR === - index */
+
+/* === NAVBAR === */
 
 nav {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: black;
+    position: fixed;
+    width: 96%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom:1pt solid darkslategray;
-    margin-bottom: 5pt;
-    font-size: 16pt;
+    justify-content: center;
+    padding: 12px 0;
+    font-size: 15pt;
 }
-nav a{
-    text-decoration: underline;
-    color: green;
+nav button {
+    top: 10px;
+    right: 10px;
 }
 
-nav ul li{
+
+nav a {
+    text-decoration: none;
+    color: #00ff66;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #7dffb3;
+}
+
+nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 0 5pt;
-
+    margin: 0 12pt;
 }
-.links{
+
+/* === HERO === */
+header{
+    width: 96%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    width: 100%;
 }
-
-@media (max-width: 1084px) {
-    .links{
-        width: 100%;
-    }
-}
-
-/* === HERO ===  - index */
-
-.header-content{
+.header-content {
     display: flex;
+    min-width: auto;
+    align-content: center;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: left;
-    background-color: darkslategray;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    gap: 12pt;
+    padding: 48pt 16pt;
+}
 
-    margin-bottom: 16pt
+.header-content h1 {
+    font-size: 36pt;
+    margin: 0;
 }
-.header-content h1{
-    font-size: 32pt;
-    display: flex;
-    flex-direction: column;
-    margin-left: 16pt;
+
+.header-content span {
+    width: 30%;
+    font-size: 16pt;
+    line-height: 1.5;
 }
-.header-content span{
-    margin-left: 16pt;
-    width: 60%;
+
+/* === BOXES === */
+
+.boxes-container1 {
+    width: 100%;
+    padding: 32pt 16pt;
+}
+
+.boxes-header {
+    text-align: center;
+    margin-bottom: 24pt;
+}
+
+.boxes-header h2 {
     font-size: 24pt;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-/* ===BOX MENU=== - index */
+.boxes-container2 {
+    display: flex;
+    gap: 16pt;
+}
 
-.boxes-container1{
+.boxes-content {
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 6px;
+    text-align: left;
+    padding: 16pt;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-
+    min-height: 180pt;
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.boxes-container2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-.boxes-header{
-    font-weight: bold;
-    text-align: center;
-}
-.boxes-content{
-    border-radius: 6pt;
-    background-color: gray;
-    text-align: center;
-    width: 33%;
-    height: 164pt;
+.boxes-content:hover {
+    border-color: #00ff66;
 }
 
+.boxes-content h3 {
+    margin-top: 0;
+    color: #00ff66;
+}
 
-
+.boxes-content p {
+    font-size: 13.5pt;
+    line-height: 1.4;
+    color: #cfcfcf;
+}
