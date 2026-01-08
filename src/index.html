@@ -17,7 +17,6 @@
             <li><a href="./index.html">Home</a></li>
             <li><a href="./models/HackBoxes.html">HackBoxes</a></li>
             <li><a href="./models/about.html">About</a></li>
-            <li><a href="./models/contact.html">Contact</a></li>
         </ul>
 
     </nav>
@@ -54,7 +53,10 @@
 
         <div class="boxes-container2">
             <section class="boxes-content">
-                <h3>SQL Injection</h3>
+                <div class="boxes-title">
+                    <img src="../public/syringe.svg" alt="syringe">
+                    <h3>SQL injection</h3>
+                </div>
                 <p>
                     Exploit unsafe database queries to extract, modify or destroy data.
                     Learn why parameterized queries exist the hard way.
@@ -66,7 +68,10 @@
             </section>
 
             <section class="boxes-content">
-                <h3>IDOR</h3>
+                <div class="boxes-title">
+                    <img src="../public/boxes.svg" alt="boxes">
+                    <h3>IDOR</h3>
+                </div>
                 <p>
                     Access resources that were never meant to be yours
                     by abusing broken access control and predictable identifiers.
@@ -78,7 +83,10 @@
             </section>
 
             <section class="boxes-content">
-                <h3>XSS</h3>
+                <div class="boxes-title">
+                    <img src="../public/bug.svg" alt="bug">
+                    <h3>XSS</h3>
+                </div>
                 <p>
                     Inject and execute malicious JavaScript in vulnerable applications.
                     Steal sessions, deface pages, understand trust boundaries.
@@ -90,6 +98,9 @@
             </section>
 
         </div>
+        <p class="boxes-more">
+            <a href="./models/HackBoxes.html"> see more ...</a>
+        </p>
     </main>
     <section class="resources-section" aria-labelledby="resources-title">
         <h2 id="resources-title">Resources</h2>
@@ -105,6 +116,28 @@
         </ul>
     </section>
 
+    <footer class="footer">
+        <div class="footer-content">
+            <section>
+                <div class="footer-more">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/FarciarzYT/WebSecurityLearningLabs">Website Source</a>
+                            <span>|</span>
+                            <a href="">Blog</a>
+                            <span>|</span>
+                            <a href="">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="https://x.com/FarciarzYT"><img src="../public/x.com.svg" alt="twitter"></a>
+                    <a href="https://github.com/FarciarzYT"><img src="../public/github-mark-white.svg" alt="github"></a>
+                </div>
+            </section>
+            <span>© 2026 Web Security Learning Labs Developers. All rights reserved.</span>
+        </div>
+    </footer>
 </div>
 </div>
 </body>

@@ -176,6 +176,18 @@ header p {
     transform: translateY(-4px);
     background-color: #282828;
 }
+.boxes-title{
+    display: flex;
+    flex-direction: row;
+}
+.boxes-title img{
+    filter: invert(1);
+    width: 24px;
+    height: 24px;
+}
+.boxes-title h3{
+    margin-left: 8px;
+}
 
 .boxes-content h3 {
     margin-top: 0;
@@ -208,6 +220,17 @@ header p {
     background-color: #cfcfcf;
     transform: translateY(-2px);
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.boxes-more {
+    font-weight: 300;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #cfcfcf;
+}
+.boxes-more p:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
 }
 
 /* === RESOURCES === */
@@ -256,6 +279,58 @@ header p {
     background-color: #282828;
     outline: none;
 }
+/* === FOOTER === */
+
+footer {
+    background-color: #0a0a0a;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+footer section{
+    margin-bottom: 8px;
+}
+.footer-content section{
+    display: flex;
+    flex-direction: row;
+}
+
+footer span{
+    font-weight: 300;
+}
+
+.footer-more ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-more a:hover{
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
+}
+
+.footer-more{
+    width: 80%;
+}
+
+.footer-social{
+width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-social img{
+    width: 24px;
+    height: 24px;
+}
 
 
 /* === RESPONSIVE === */
@@ -264,11 +339,21 @@ header p {
     .boxes-container2 {
         flex-direction: column;
     }
-
     header h1 {
         font-size: 28pt;
     }
     .resources-links {
         flex-direction: column;
+    }
+}
+@media (max-width: 600px) {
+    header p {
+        font-size: 14pt;
+    }
+    header h1 {
+        font-size: 24pt;
+    }
+    nav{
+        display: none;
     }
 }

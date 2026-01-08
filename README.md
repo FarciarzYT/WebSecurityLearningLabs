@@ -28,3 +28,9 @@ All examples are provided solely for learning and security analysis purposes.
 ## Status
 
 Project under development.
+
+TODO: 
+ - make ui even better
+ - add more icons
+ - add more vulnerabilities
+ - make this more dynamic
