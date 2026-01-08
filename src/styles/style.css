@@ -62,12 +62,15 @@ nav ul {
 }
 
 nav a {
-    color: #00ff66;
-    transition: color 0.2s ease;
+    font-weight: 300;
+    padding: 8px 6px;
 }
 
 nav a:hover {
-    color: #7dffb3;
+    background-color: #282828;
+    border-radius: 12px;
+    transition: background-color 0.2s ease-in-out;
+
 }
 
 /* === HERO === */
@@ -92,7 +95,7 @@ header h1 {
     margin: 0;
 }
 
-header span {
+header p {
     font-size: 16pt;
     font-style: italic;
     line-height: 1.5;
@@ -176,7 +179,7 @@ header span {
 
 .boxes-content h3 {
     margin-top: 0;
-    color: #00ff66;
+
 }
 
 .boxes-content p {
@@ -210,22 +213,50 @@ header span {
 /* === RESOURCES === */
 
 .resources-section {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 64px 16px;
+    padding: 4rem 1rem;
     text-align: center;
 }
 
 .resources-section h2 {
-    font-size: 24pt;
-    margin: 0;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-.resources-section span {
-    font-size: 16pt;
+.resources-desc {
+    font-size: 1rem;
     font-style: italic;
-    line-height: 1.5;
+    opacity: 0.8;
 }
+
+.resources-links {
+    list-style: none;
+    margin-top: 2.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.resources-links a {
+    display: block;
+    padding: 1.25rem;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.15s ease;
+}
+
+.resources-links a:hover,
+.resources-links a:focus-visible {
+    transform: translateY(-2px);
+    background-color: #282828;
+    outline: none;
+}
+
 
 /* === RESPONSIVE === */
 
@@ -236,5 +267,8 @@ header span {
 
     header h1 {
         font-size: 28pt;
+    }
+    .resources-links {
+        flex-direction: column;
     }
 }
