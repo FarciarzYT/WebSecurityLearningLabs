@@ -1,36 +1,70 @@
+/* === BASE === */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif; /*TODO:change this font please*/
     background-color: #0a0a0a;
     color: #eaeaea;
     margin: 0;
-    padding: 0;
 }
-.container-main{
-    padding-top: 16pt;
-}
-a{
+
+a {
     text-decoration: none;
+    color: inherit;
 }
+
+/* === LAYOUT CONTAINERS === */
+
+.container {
+    width: 100%;
+}
+
+.container-main {
+    padding-top: 80px;
+}
+
+/* Shared centered width */
+.centered {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
 /* === NAVBAR === */
 
 nav {
     position: fixed;
-    width: 96%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+
     display: flex;
     justify-content: center;
-    padding: 12px 0;
+    align-items: center;
+
+    padding: 12px 16px;
     font-size: 15pt;
-    z-index: 100;
     background-color: #0a0a0a;
-}
-nav button {
-    top: 10px;
-    right: 10px;
+    z-index: 100;
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
 
 nav a {
-    text-decoration: none;
     color: #00ff66;
     transition: color 0.2s ease;
 }
@@ -39,75 +73,22 @@ nav a:hover {
     color: #7dffb3;
 }
 
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 0 12pt;
-}
-
 /* === HERO === */
 
-header{
-    margin-top:16pt;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    align-content: center;
-}
-
-.header-buttons {
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    gap: 12pt;
+header {
     width: 100%;
-    font-weight: 500;
-}
-.header-buttons div {
-    padding: 6pt 12pt;
-    border-radius: 24pt;
-    cursor: pointer;
-}
-.github-button img {
-    width: 16pt;
-    height: 16pt;
-}
-.github-button:hover{
-    transform: translateY(-4px);
-    transition: transform 0.2s ease;
-}
-.start-button:hover{
-    transform: translateY(-4px);
-    transition: transform 0.2s ease;
-}
-.github-button{
-    padding: 0;
-    margin: 0;
-    border: 2px solid white;
-    color: white;
 }
 
-.start-button{
-    color: black;
-    background-color: #ffffff;
-}
-
-.start-button img{
-    width: 16pt;
-    height: 16pt;
-}
 .header-content {
-    display: flex;
-    width: 100%;
-    align-content: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap: 12pt;
-    padding: 48pt 16pt;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 16px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
 }
 
 header h1 {
@@ -117,79 +98,85 @@ header h1 {
 
 header span {
     font-size: 16pt;
-    line-height: 1.5;
     font-style: italic;
+    line-height: 1.5;
 }
 
-/* === BOXES === */
+/* === HERO BUTTONS === */
+
+.header-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.header-buttons div {
+    padding: 8px 18px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.header-buttons div:hover {
+    transform: translateY(-4px);
+}
+
+.start-button {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.github-button {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.header-buttons img {
+    width: 16px;
+    height: 16px;
+}
+
+/* === BOXES SECTION === */
 
 .boxes-container1 {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.boxes-container2 {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    gap: 16pt;
-}
-.boxes-arrow{
-    background-color: #dddddd;
-    border-radius: 50px;
-    font-weight: bold;
-    color: black;
-    width: 20%;
-    padding: 12pt;
-    height: 16pt;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.boxes-arrow:hover{
-    background-color: #cdcdcd;
-    transition: background-color 0.2s ease;
 }
 
 .boxes-header {
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    margin-bottom: 24pt;
-}
-.boxes-header span {
-    font-size: 12pt;
+    margin-bottom: 32px;
 }
 
 .boxes-header h2 {
     font-size: 24pt;
+    margin: 0;
 }
 
+.boxes-container2 {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 16px;
+}
 
 .boxes-content {
     background-color: #1e1e1e;
-    border-radius: 45px;
-    text-align: left;
-    padding: 32pt;
-    width: 100%;
-    min-height: 140pt;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    border-radius: 32px;
+    padding: 32px;
+    flex: 1;
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
-.boxes-content h3{
-    font-weight: bolder;
-}
-.boxes-content div:hover{
-    background-color: #cfcfcf;
-    transition: background-color 0.2s ease;
-}
+
 .boxes-content:hover {
     transform: translateY(-4px);
     background-color: #282828;
-    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .boxes-content h3 {
@@ -202,19 +189,36 @@ header span {
     line-height: 1.4;
     color: #cfcfcf;
 }
-/* === resources === */
-.resources-section {
-    display: flex;
-    width: 80%;
-    align-content: center;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    gap: 12pt;
-    padding: 48pt 16pt;
 
+/* === BOX CTA === */
+
+.boxes-arrow {
+    margin-top: 24px;
+    background-color: #dddddd;
+    color: #000000;
+    border-radius: 24px;
+    padding: 10px 16px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.boxes-arrow:hover {
+    background-color: #cfcfcf;
+}
+
+/* === RESOURCES === */
+
+.resources-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 16px;
+    text-align: center;
 }
 
 .resources-section h2 {
@@ -224,7 +228,18 @@ header span {
 
 .resources-section span {
     font-size: 16pt;
-    line-height: 1.5;
     font-style: italic;
+    line-height: 1.5;
 }
 
+/* === RESPONSIVE === */
+
+@media (max-width: 900px) {
+    .boxes-container2 {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 28pt;
+    }
+}
