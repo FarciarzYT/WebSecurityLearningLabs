@@ -1,31 +1,30 @@
 # Web Security Labs
 
-Edukacyjna strona internetowa prezentująca wybrane zagadnienia z zakresu cyberbezpieczeństwa webowego.  
+An educational website presenting selected topics in web cybersecurity.
 
-Projekt pokazuje **jak działają popularne podatności i techniki ataku** oraz **na czym polega ich realne ryzyko**.
+The project demonstrates **how common vulnerabilities and attack techniques work** and **what their real-world risk looks like**.
 
+## Goal
 
-## Cel
+The goal of the project is to:
+- learn web application security
+- understand the mechanisms behind vulnerabilities
+- show **why** certain solutions are insecure
+- build a security-first mindset
 
-Celem projektu jest:
-- nauka bezpieczeństwa aplikacji webowych
-- zrozumienie mechanizmów stojących za podatnościami
-- pokazanie, **dlaczego** dane rozwiązania są niebezpieczne
-- budowanie świadomości security-first
+The project is **educational** in nature.
 
-Projekt ma charakter **edukacyjny**.
+## Warning
 
-## Ostrzeżenie
+This project **is not intended for unauthorized testing or attacks**.  
+All examples are provided solely for learning and security analysis purposes.
 
-Ten projekt **nie jest przeznaczony do nieautoryzowanych testów ani ataków**.  
-Wszystkie przykłady służą wyłącznie do nauki i analizy bezpieczeństwa.
-
-## Technologie
+## Technologies
 
 - HTML / CSS / JavaScript
-- (opcjonalnie) backend do celów demonstracyjnych
-- Przeglądarka i zdrowy rozsądek
+- (optional) backend for demonstration purposes
+- A web browser and common sense
 
 ## Status
 
-Projekt w trakcie rozwoju.
+Project under development.
