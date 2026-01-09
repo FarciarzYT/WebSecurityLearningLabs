@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 /* === BASE === */
 
 * {
@@ -5,10 +7,13 @@
 }
 
 body {
-    font-family: Helvetica, sans-serif; /*TODO:change this font please*/
-    background-color: #0a0a0a;
+    background-color: black;
     color: #eaeaea;
     margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 a {
@@ -80,9 +85,9 @@ header {
 }
 
 .header-content {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 64px 16px;
+    padding: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,11 +96,12 @@ header {
 }
 
 header h1 {
-    font-size: 38pt;
+    font-size: 48pt;
     margin: 0;
 }
 
 header p {
+    margin: 0;
     font-size: 16pt;
     font-style: italic;
     line-height: 1.5;
@@ -106,15 +112,18 @@ header p {
 .header-buttons {
     display: flex;
     gap: 16px;
-    margin-top: 16px;
+}
+.header-buttons span{
+    margin-left: 8px;
 }
 
 .header-buttons div {
-    padding: 8px 18px;
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 12px 24px;
     border-radius: 24px;
     display: flex;
     align-items: center;
-    gap: 8px;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -125,6 +134,7 @@ header p {
 
 .start-button {
     background-color: #ffffff;
+    border: 2px solid #ffffff;
     color: #000000;
 }
 
@@ -152,7 +162,7 @@ header p {
 }
 
 .boxes-header h2 {
-    font-size: 24pt;
+    font-size: 16pt;
     margin: 0;
 }
 
@@ -203,7 +213,7 @@ header p {
 /* === BOX CTA === */
 
 .boxes-arrow {
-    margin-top: 24px;
+    margin-top: 6px;
     background-color: #dddddd;
     color: #000000;
     border-radius: 24px;
