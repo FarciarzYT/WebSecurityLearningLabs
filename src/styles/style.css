@@ -481,7 +481,6 @@ header p {
 .resources-links a {
     display: block;
     padding: 1.25rem;
-    background-color: #1e1e1e;
     border-radius: 8px;
     text-decoration: none;
     color: #fff;
@@ -491,7 +490,9 @@ header p {
 .resources-links a:hover,
 .resources-links a:focus-visible {
     transform: translateY(-2px);
-    background-color: #282828;
+    transition: transform 0.15s ease;
+    cursor: pointer;
+    text-decoration: underline;
     outline: none;
 }
 /* === FOOTER === */
