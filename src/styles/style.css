@@ -425,12 +425,15 @@ header p {
     transform: translateY(-2px);
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
-
+#boxes-more:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out,transform 0.2s ease-in-out;
+    transform: translateY(-2px);
+}
 .boxes-more {
     font-weight: 300;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-decoration-color: #cfcfcf;
+    color: #eeeeee;
     height: fit-content;
 }
 .boxes-more p:hover {
