@@ -375,9 +375,6 @@ header p {
     transition: transform 0.2s ease;
 }
 
-.boxes-content:hover {
-    transform: translateY(-4px);
-}
 .boxes-title{
     display: flex;
     flex-direction: row;
