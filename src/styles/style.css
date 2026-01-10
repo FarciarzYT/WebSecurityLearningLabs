@@ -569,6 +569,9 @@ footer span{
     .main-content-text p{
         font-size: 12pt;
     }
+    .boxes-header h2{
+        font-size: 24pt;
+    }
 
 }
 @media (max-width: 600px) {
