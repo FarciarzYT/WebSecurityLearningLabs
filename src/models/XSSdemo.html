@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Web Security Learning Labs</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Hands-on web security labs focused on real vulnerabilities." />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+</head>
+
+<body>
+<div class="container">
+    <nav>
+        <ul class="links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../models/HackBoxes.html">HackBoxes</a></li>
+            <li><a href="../models/about.html">About</a></li>
+        </ul>
+
+
+        <div class="user-icon">
+            <a href="">
+                <img src="../../public/user.svg" alt="user">
+            </a>
+        </div>
+    </nav>
+    <div class="container-main">
+        <header class="header-main-hackboxes">
+            <div class="header-content-hackboxes">
+                <h1>XSS demo</h1>
+            </div>
+        </header>
+        <main class="main-content-hackboxes">
+            <div class="vulnarability-example">
+                <h2>Basic Search (Vulnerable)</h2>
+                <label for="search">Search input</label>
+                <input type="text" placeholder="search" id="search">
+                <button onclick="search()">Search</button>
+                <div id="result"></div>
+            </div>
+
+            <div>
+                <h2>How does this vulnerability work?</h2>
+                <p>
+                    The search input is inserted directly into the page without any escaping.
+                    This means the browser treats user input as HTML instead of plain text.
+                </p>
+                <hr>
+                <p>
+                    Try entering the following payload:
+                </p>
+                <code>&lt;img src=x onerror=alert(1)&gt;</code>
+                <hr>
+                <p>
+                    If the website is vulnerable, the browser will execute the injected
+                    JavaScript instead of displaying it, proving a Cross-Site Scripting (XSS)
+                    vulnerability.
+                </p>
+            </div>
+
+            <p>
+                Will Change Design Someday....
+            </p>
+        </main>
+    </div>
+
+
+
+        <footer class="footer">
+            <div class="footer-content">
+                <section>
+                    <div class="footer-more">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/FarciarzYT/WebSecurityLearningLabs">Website Source</a>
+                                <span>|</span>
+                                <a href="">Blog</a>
+                                <span>|</span>
+                                <a href="../../src/models/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social">
+                        <div>
+                            <a href="https://x.com/FarciarzYT" target="_blank"><img src="../../public/x.com.svg" alt="twitter"></a>
+                        </div>
+                        <a href="https://github.com/FarciarzYT" target="_blank"><img src="../../public/github-mark-white.svg" alt="github"></a>
+                    </div>
+                </section>
+                <span>© 2026 Web Security Learning Labs Developers. All rights reserved.</span>
+            </div>
+        </footer>
+    </div>
+<script>
+    function search() {
+        const v = document.getElementById("search").value;
+        document.getElementById("result").innerHTML = v;
+    }
+</script>
+</body>
+</html>

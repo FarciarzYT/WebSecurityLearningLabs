@@ -36,15 +36,14 @@ a {
 nav {
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 12px 16px;
-    font-size: 15pt;
+    font-size: 14pt;
+    font-weight: 300;
     z-index: 100;
     background-color: black;
 }
@@ -56,6 +55,10 @@ nav ul {
     margin: 0;
     padding: 0;
 }
+.links{
+    margin-left: auto;
+    margin-right: auto;
+}
 
 nav a {
     font-weight: 300;
@@ -63,8 +66,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #282828;
-    border-radius: 12px;
+    text-decoration: underline;
+    cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 
 }
@@ -74,10 +77,11 @@ nav a:hover {
     align-items: center;
     cursor: pointer;
     border-radius: 50%;
-    padding: 2px 8px;
-    border: 2px solid #eeeeee;
-    margin-left: auto;
-    margin-right: 8px;
+    right: 4px;
+    position: fixed;
+}
+.user-icon:hover{
+    cursor: pointer;
 }
 .user-icon img{
     filter: invert(1);
@@ -610,4 +614,21 @@ hr{
     width: 100%;
     margin-top: 16px;
 }
-
+/*HackBoxes*/
+.header-main-hackboxes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    text-align: center;
+    font-size: 32pt;
+    width: 100%;
+}
+.main-content-hackboxes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
