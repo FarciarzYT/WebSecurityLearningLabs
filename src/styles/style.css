@@ -96,7 +96,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: black;
-    height: 92vh;
+    height: 100vh;
 }
 
 .header-content {
@@ -114,6 +114,7 @@ header {
 header h1 {
     font-size: 56pt;
     margin: 0;
+    font-weight: 900;
 }
 
 header p {
@@ -121,11 +122,12 @@ header p {
     font-size: 18pt;
     font-style: italic;
     line-height: 1.5;
+    font-weight: 300;
 }
 
 .cool-arrow {
     color: #eeeeee;
-    padding-top: 40vh;
+    padding-top: 45vh;
     animation: bounce 2s infinite;
     filter: invert(1);
 }
@@ -220,11 +222,12 @@ header p {
     font-size: 32pt;
     font-weight: 900;
     line-height: 1.2;
+
 }
 
 .main-content-text p {
     margin-top: 16px;
-    font-size: 13.5pt;
+    font-size: 14pt;
     line-height: 1.6;
 }
 
@@ -361,10 +364,10 @@ header p {
 }
 
 .boxes-container2 {
+    max-width: 1400px;
     display: flex;
-    gap: 24px;
+    gap: 32px;
     width: 100%;
-    max-width: 1200px;
     padding: 0 16px;
 }
 
@@ -394,15 +397,16 @@ header p {
 }
 
 .boxes-content p {
-    font-size: 13.5pt;
-    line-height: 1.4;
+    font-weight: 300;
+    max-height: 75px;
+    font-size: 14pt;
     color: #cfcfcf;
 }
 
 /* === BOX CTA === */
 
 .boxes-arrow {
-    margin-top: 6px;
+    margin-top: 24px;
     background-color: #eeeeee;
     color: #000000;
     font-size: 14pt;
@@ -421,7 +425,7 @@ header p {
 }
 
 .boxes-arrow:hover {
-    background-color: #cfcfcf;
+    background-color: #eeeeee;
     transform: translateY(-2px);
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
@@ -456,32 +460,33 @@ header p {
 }
 
 .resources-section h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 32pt;
+    margin-bottom: 16px;
 }
 
 .resources-desc {
-    font-size: 1rem;
+    font-size: 14pt;
     font-style: italic;
-    opacity: 0.8;
+    font-weight: 300;
 }
 
 .resources-links {
     list-style: none;
-    margin-top: 2.5rem;
+    margin-top: 64px;
     padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .resources-links a {
+    font-size: 14pt;
     display: block;
-    padding: 1.25rem;
-    border-radius: 8px;
+    padding: 16px;
+    border-radius: 16px;
     text-decoration: none;
-    color: #fff;
+    color: #eeeeee;
     transition: transform 0.15s ease;
 }
 
@@ -524,8 +529,8 @@ footer span{
 }
 
 .footer-more a:hover{
-    transform: translateY(-2px);
-    transition: transform 0.2s ease-in-out;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .footer-more{
