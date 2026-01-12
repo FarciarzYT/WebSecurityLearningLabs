@@ -27,45 +27,86 @@
     <div class="container-main">
         <header class="header-main-hackboxes">
             <div class="header-content-hackboxes">
-                <h1>XSS demo</h1>
+                <div>
+                    <h1 class="hackbox-title">XSS Course</h1>
+                    <p class="hackbox-description">simple description</p>
+                </div>
+                <div>
+                    <span class="hackbox-difficulty-level">easy |</span>
+                    <span class="hackbox-read-time">30 min |</span>
+                    <span class="hackbox-user-number">users 10 |</span>
+                    <span class="hacbox-contributors">FarciarzYT </span>
+                </div>
             </div>
         </header>
-        <main class="main-content-hackboxes">
-            <div class="vulnarability-example">
-                <h2>Basic Search (Vulnerable)</h2>
-                <label for="search">Search input</label>
-                <input type="text" placeholder="search" id="search">
-                <button onclick="search()">Search</button>
-                <div id="result"></div>
-            </div>
+            <main class="main-content-hackboxes">
 
-            <div>
-                <h2>How does this vulnerability work?</h2>
-                <p>
-                    The search input is inserted directly into the page without any escaping.
-                    This means the browser treats user input as HTML instead of plain text.
-                </p>
-                <hr>
-                <p>
-                    Try entering the following payload:
-                </p>
-                <code>&lt;img src=x onerror=alert(1)&gt;</code>
-                <hr>
-                <p>
-                    If the website is vulnerable, the browser will execute the injected
-                    JavaScript instead of displaying it, proving a Cross-Site Scripting (XSS)
-                    vulnerability.
-                </p>
-            </div>
+                <div class="main-content-hackboxes-header">
+                    <h2>What is XSS?</h2>
+                </div>
 
-            <p>
-                Will Change Design Someday....
-            </p>
-        </main>
-    </div>
+                <div class="main-content-hackboxes-text">
+                    <p>
+                        XSS (Cross-Site Scripting) is a web security vulnerability that allows an attacker
+                        to inject malicious JavaScript into a website. That script is then executed in
+                        the victim’s browser as if it were trusted code from the site itself.
+                    </p>
+                    <p>
+                        The result? Stolen cookies, hijacked sessions, fake forms, or users doing things
+                        they never intended to do. All because the application trusted input it really
+                        shouldn’t have.
+                    </p>
+                </div>
 
+                <div class="main-content-hackboxes-example">
+                <pre><code>
+                    &lt;script&gt;
+                      alert('XSS');
+                    &lt;/script&gt;
+                </code></pre>
+                    <p>
+                        If a website displays user input without proper escaping, an attacker can inject
+                        JavaScript like this. When another user loads the page, the script runs in their browser.
+                    </p>
+                </div>
+                <div class="main-content-hackboxes-explenation">
 
+                </div>
 
+                <div class="main-content-hackboxes-text">
+                    <p>
+                        XSS usually happens when user input is directly inserted into HTML, attributes,
+                        or JavaScript without validation or encoding. Common targets include comment sections,
+                        search fields, profile names, and error messages.
+                    </p>
+                    <p>
+                        There are three main types: Stored XSS, Reflected XSS, and DOM-based XSS.
+                        Different mechanics, same bad idea: trusting user input.
+                    </p>
+                </div>
+
+                <div class="main-content-hackboxes-defend">
+                    <h3>How to defend against XSS</h3>
+                    <ul>
+                        <li>Always escape user input before rendering it in HTML</li>
+                        <li>Use proper output encoding based on context (HTML, attribute, JS)</li>
+                        <li>Never trust client-side validation alone</li>
+                        <li>Use modern frameworks that auto-escape content</li>
+                        <li>Apply Content Security Policy (CSP)</li>
+                    </ul>
+                </div>
+
+                <div class="main-content-hackboxes-footer">
+                    <p>
+                        XSS is simple, common, and still everywhere. If your app accepts input and shows it
+                        back to users, XSS is already knocking.
+                    </p>
+                </div>
+                <div class="main-content-hackboxes-quiz">
+
+                </div>
+            </main>
+        </div>
         <footer class="footer">
             <div class="footer-content">
                 <section>

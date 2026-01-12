@@ -607,7 +607,7 @@ footer span{
     font-size: 36pt;
 }
 .about-main p{
-    font-size: 16pt;
+    font-size: 14pt;
 }
 hr{
     color: #dddddd;
@@ -621,14 +621,25 @@ hr{
     align-items: center;
     justify-content: center;
     background-color: black;
-    text-align: center;
-    font-size: 32pt;
     width: 100%;
 }
+.header-content-hackboxes{
+    text-align: center;
+}
+
+.hackbox-title{
+    font-size: 56pt;
+    font-weight: 900;
+}
+.hackbox-description{
+    font-size: 14pt;
+    font-weight: 300;
+}
+
+
 .main-content-hackboxes{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
