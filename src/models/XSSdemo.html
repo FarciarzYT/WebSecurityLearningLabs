@@ -39,10 +39,12 @@
                 </div>
             </div>
         </header>
+
             <main class="main-content-hackboxes">
 
                 <div class="main-content-hackboxes-header">
                     <h2>What is XSS?</h2>
+                    <!--button>Collapse</button>-->
                 </div>
 
                 <div class="main-content-hackboxes-text">
@@ -59,11 +61,31 @@
                 </div>
 
                 <div class="main-content-hackboxes-example">
-                <pre><code>
-                    &lt;script&gt;
-                      alert('XSS');
-                    &lt;/script&gt;
-                </code></pre>
+                    <div class="main-content-hackboxes-header">
+                        <h2>Simple example</h2>
+                    </div>
+                    <div class="main-content-hackboxes-example-code">
+                        <div class="main-content-hackboxes-example-code-text">
+                            <p>
+                               this input is vulnerable because it displays text written to it using InnerHTML() that allows you to inject js scripts into the input
+                            </p>
+
+                            <div class="main-content-vulnerable-code">
+                                <label for="search"></label>
+                                <input type="text" id="search" placeholder="inject js into the website" onkeyup="search()"/>
+                                <p id="result"></p>
+                            </div>
+
+                            <p>
+                                you can copy this payload
+                            </p>
+                            <div class="example-code">
+                                <code>
+                                    &lt;img src=x onerror="alert('XSS is easy')"&gt;&lt;/img&gt;
+                                </code>
+                            </div>
+                        </div>
+                    </div>
                     <p>
                         If a website displays user input without proper escaping, an attacker can inject
                         JavaScript like this. When another user loads the page, the script runs in their browser.
@@ -86,7 +108,9 @@
                 </div>
 
                 <div class="main-content-hackboxes-defend">
-                    <h3>How to defend against XSS</h3>
+                    <div class="main-content-hackboxes-header">
+                        <h2>How to defend against XSS</h2>
+                    </div>
                     <ul>
                         <li>Always escape user input before rendering it in HTML</li>
                         <li>Use proper output encoding based on context (HTML, attribute, JS)</li>

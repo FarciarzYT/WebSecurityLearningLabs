@@ -614,32 +614,92 @@ hr{
     width: 100%;
     margin-top: 16px;
 }
-/*HackBoxes*/
-.header-main-hackboxes{
+
+/* =========================
+   Layout
+========================= */
+
+.main-content-hackboxes {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 14pt;
+}
+
+/* =========================
+   Header
+========================= */
+
+.header-main-hackboxes {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: black;
     width: 100%;
+    margin-bottom: 32pt;
 }
-.header-content-hackboxes{
+
+.header-content-hackboxes {
     text-align: center;
 }
 
-.hackbox-title{
+/* =========================
+   Typography
+========================= */
+
+.hackbox-title {
     font-size: 56pt;
     font-weight: 900;
 }
-.hackbox-description{
+
+.hackbox-description {
     font-size: 14pt;
     font-weight: 300;
 }
 
-
-.main-content-hackboxes{
+.main-content-hackboxes-header {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    font-size: 24pt;
+    line-height: 1;
+    text-align: start;
+}
+
+/* =========================
+   Content sections
+========================= */
+
+.main-content-hackboxes-text {
+    /* intentionally left blank for future spacing/text rules */
+}
+
+.main-content-hackboxes-defend {
+    margin: 0;
+}
+
+.main-content-hackboxes-defend ul {
+    padding: 16px;
+}
+
+/* =========================
+   Code / examples
+========================= */
+
+.main-content-hackboxes-code {
+    background-color: #0f0f0f;
+}
+.example-code{
+    padding: 16px 0;
+}
+.main-content-vulnerable-code{
+    display: flex;
+    flex-direction: row;
+
+    padding: 16px 0;
+}
+.main-content-vulnerable-code input{
+    width: 40%;
+    margin: 0 auto;
 }
