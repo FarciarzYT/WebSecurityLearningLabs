@@ -1,4 +1,4 @@
-import {VscArrowRight} from "react-icons/vsc";
+import {ArrowRight} from "lucide-react";
 
 export default function Navbar() {
 
@@ -14,10 +14,10 @@ export default function Navbar() {
                         </ul>
                     </li>
 
-                    <li className="hover:underline flex flex-row items-center">
+                    <li className="hover:underline flex flex-row">
                         <a href="/signup" className="px-4 py-2 ">
                             <span>Sign up</span>
-                        <VscArrowRight/>
+                            <ArrowRight />
                         </a>
                     </li>
 

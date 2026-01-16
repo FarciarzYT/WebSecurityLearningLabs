@@ -1,5 +1,5 @@
-import {FaGithub} from "react-icons/fa";
-import {VscBook,VscArrowDown} from "react-icons/vsc";
+import {ArrowDown, BookOpenText, Github} from "lucide-react";
+
 
 export default function Hero() {
     return (
@@ -12,7 +12,7 @@ export default function Hero() {
                 <div className="flex flex-row text-lg font-bold gap-4">
                     <a href="">
                         <div className="bg-[#eeeeee] border-2 border-solid text-black transform hover:-translate-y-2 transition ease-in-out duration-300 px-6 py-4 rounded-4xl gap-2 flex flex-row content-center">
-                            <VscBook className="w-6 h-7"/>
+                            <BookOpenText  className="w-6 h-7"/>
                             <span>
                                 Explore
                             </span>
@@ -21,7 +21,7 @@ export default function Hero() {
 
                     <a href="" target="_blank" rel="nofollow noopener noreferrer">
                     <div className=" gap-2 border-2 border-solid transform hover:-translate-y-2 transition ease-in-out duration-300 px-6 py-4 rounded-4xl flex flex-row content-center ">
-                        <FaGithub className="w-6 h-7"/>
+                        <Github className="w-6 h-7"/>
                         <span>
                             GitHub
                         </span>
@@ -29,7 +29,7 @@ export default function Hero() {
                     </a>
                 </div>
                 <div>
-                      <VscArrowDown className="bottom-1"/>
+                      <ArrowDown className="bottom-1"/>
                 </div>
             </header>
         </>
