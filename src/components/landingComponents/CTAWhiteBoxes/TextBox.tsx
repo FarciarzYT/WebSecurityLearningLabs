@@ -1,7 +1,7 @@
 export function TextBox(){
     return (
         <>
-            <div className="flex flex-col bg-white text-black w-[70%]  shadow-2xl rounded-4xl p-8 mb-8">
+            <div className="flex flex-col border text-white w-[70%]  shadow-2xl rounded-4xl p-8 mb-8">
                 <h2 className="font-bold text-[3rem]">Why It Matters</h2>
                 <p className="font-light text-[1.2rem] mt-4">
                     Modern web applications are built fast often too fast.
