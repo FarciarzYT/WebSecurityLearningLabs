@@ -14,6 +14,7 @@ const isLoggedIn = false;
 
 
 export function Navbar() {
+
     return (
         <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 1/2-full bg-white/2 backdrop-blur-lg shadow-2xl rounded-full">
             <div className="max-w-5xl mx-auto px-8 h-16 flex items-center justify-between">
@@ -36,7 +37,7 @@ export function Navbar() {
                 <div className="flex items-center gap-4">
                     {!isLoggedIn && (
                         <button
-                            className="font-bold ml-8 text-[0.8rem] tracking-[0.12em] shadow-2xl uppercase cursor-pointer text-black bg-white px-5 py-2 rounded-full hover:bg-white/85 transition-all duration-200 hover:-translate-y-px"
+                            className="font-bold ml-8 text-[0.8rem] tracking-[0.12em] shadow-2xl uppercase cursor-pointer text-black bg-white/85 hover:bg-white focus:bg-white px-5 py-2 rounded-full hover:transition-all duration-200 hover:-translate-y-px"
                         >
                             Sign up
                         </button>
