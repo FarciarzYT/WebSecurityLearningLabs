@@ -3,7 +3,7 @@ import { FaShield, FaGraduationCap, FaFlask,FaGift } from "react-icons/fa6";
 const whyUsItems = [
     {
         title: "100% Free",
-        text: "No subscriptions, no hidden fees — all materials are free to use.",
+        text: "No subscriptions, no hidden fees all materials are free to use.",
         icon: <FaGift size={28} aria-hidden="true" />,
     },
     {

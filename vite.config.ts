@@ -10,4 +10,9 @@ export default defineConfig({
     svgr(),
     react(),
   ],
+  server: {
+    allowedHosts: [
+      'ossified-nikki-unsafely.ngrok-free.dev'
+    ]
+  }
 })

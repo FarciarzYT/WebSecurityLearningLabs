@@ -14,7 +14,7 @@ export default function UserCounter() {
     return (
         <section aria-labelledby="stats-heading" className="mt-32 mb-32">
             <h2 id="stats-heading" className="text-center font-bold text-[2.5rem] mb-5" >
-                Platform Statistics
+               What We Achieved
             </h2>
             <dl  className="flex gap-6 justify-center">
             {LabsItems.map(({title, icon, value}) => (

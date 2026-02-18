@@ -72,7 +72,7 @@ export default function NewLabs() {
                                 </p>
 
                                 <div className="mt-auto">
-                                    <div className="inline-flex items-center gap-2 bg-white/90 hover:bg-white text-black px-4 py-2 rounded-2xl text-sm font-semibold transition">
+                                    <div className="inline-flex items-center gap-2 bg-white/90 hover:bg-white w-fit text-center text-black px-4 py-2 rounded-2xl text-sm font-semibold transition">
                                         {btnIcon}
                                         <span>{btnText}</span>
                                     </div>
@@ -83,7 +83,7 @@ export default function NewLabs() {
                 )}
             </div>
 
-            <div className="flex justify-center mt-12 text-white/85">
+            <div className="flex justify-center mt-12 text-white/85 hover:text-white">
                 <a href="#" className="text-sm hover:underline">
                     See more labs
                 </a>
