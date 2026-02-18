@@ -1,4 +1,5 @@
-import { FaSyringe, FaBoxesStacked, FaBug,FaHatWizard } from "react-icons/fa6";
+import {FaSyringe, FaBoxesStacked, FaBug, FaKey, FaDatabase, FaCode} from "react-icons/fa6";
+
 import * as React from "react";
 
 const labsItems = [
@@ -7,19 +8,25 @@ const labsItems = [
         text: "Exploit unsafe database queries to extract, modify or destroy data. Learn why parameterized queries exist the hard way.",
         href: "./models/SQLIdemo.html",
         icon: <FaSyringe size={24} strokeWidth={1.25} />,
+        btnText: "Dump the Database",
+        btnIcon: <FaDatabase size={22} aria-hidden="true" />,
     },
     {
         title: "IDOR",
         text: "Access resources that were never meant to be yours by abusing broken access control and predictable identifiers.",
         href: "./models/IDORdemo.html",
         icon: <FaBoxesStacked size={24} strokeWidth={1.25} />,
+        btnText: "Access Unauthorized Data",
+        btnIcon: <FaKey size={22} aria-hidden="true" />,
     },
     {
         title: "XSS",
         text: "Inject and execute malicious JavaScript in vulnerable applications. Steal sessions, deface pages, understand trust boundaries.",
         href: "./models/XSSdemo.html",
         icon: <FaBug size={24} strokeWidth={1.25} />,
-    },
+        btnText: "Execute Payload",
+        btnIcon: <FaCode size={22} aria-hidden="true" />,
+    }
 ];
 
 
@@ -29,14 +36,14 @@ export default function NewLabs(){
         <>
             <section className="mb-80">
                 <header>
-                    <h2 className="text-center mb-8 text-[3rem]">
-                        Beginner Vulnerability Labs
+                    <h2 className="text-center mb-8 text-[3rem] font-bold">
+                        Start With Your First Exploit
                     </h2>
                 </header>
 
                 <div className="mb-8 w-[73%] flex flex-wrap gap-6 mx-auto">
-                    {labsItems.map(({ title, text, href, icon }) => (
-                        <article key={title} className="w-[30%] rounded-3xl p-6 transition focus-within:ring-2 focus-within:ring-white border-white border">
+                    {labsItems.map(({ title, text, href, icon,btnText, btnIcon }) => (
+                        <article key={title} className="w-[30%] rounded-3xl p-6 transition backdrop-blur-md border border-white/10 bg-black/40  focus-within:ring-2 focus-within:ring-white ">
                             <a
                                 href={href}
                                 target="_blank"
@@ -57,9 +64,9 @@ export default function NewLabs(){
                                     {text}
                                 </p>
 
-                                <div className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-2xl text-sm font-medium">
-                                    <FaHatWizard size={18} aria-hidden="true" />
-                                    <span>Learn</span>
+                                <div className="font-bold inline-flex items-center gap-2 bg-white/85 hover:bg-white transition duration-300 text-black/90 hover:text-black px-4 py-2 rounded-2xl text-sm ">
+                                    {btnIcon}
+                                    <span>{btnText}</span>
                                 </div>
                             </a>
                         </article>
