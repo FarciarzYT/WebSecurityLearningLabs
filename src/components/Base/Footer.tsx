@@ -62,7 +62,7 @@ export default function Footer() {
 
 
                     <div className="flex flex-col items-center gap-3 mb-6 ">
-                        <input type="email" placeholder={"email@gmail.com"} className={"font-semibold transition px-4 py-2 border-white/10 mr-auto border w-48 bg-white/2 rounded-xl"}></input>
+                        <input type="email" placeholder={"email@gmail.com"} className={"font-semibold transition px-4 py-2 border-white/10 mr-auto border w-48 bg-white/2 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/10 appearance-none "}></input>
                         <button className="bg-white text-black px-6 py-2 rounded-xl font-semibold mr-auto hover:bg-white/90 transition cursor-pointer w-48">
                             Receive Updates
                         </button>
