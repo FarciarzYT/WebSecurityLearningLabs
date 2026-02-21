@@ -1,4 +1,5 @@
 import { FaShield, FaGraduationCap, FaFlask,FaGift } from "react-icons/fa6";
+import {motion} from "motion/react";
 
 const whyUsItems = [
     {
@@ -26,15 +27,27 @@ const whyUsItems = [
 export default function WhyUs() {
     return (
         <section className="mt-32 mb-32" aria-labelledby="why-us-heading">
-            <h2 id="why-us-heading" className="text-center text-[2.5rem] mb-12 font-bold">
-                What Makes Us Different
-            </h2>
-
-            <div className="w-[80%] mx-auto flex flex-wrap justify-center gap-8">
+            <div className="mx-auto max-w-6xl">
+                <motion.div
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground text-balance">
+                        Why Choose Us
+                    </h2>
+                    <p className="mt-4 text-muted-foreground text-lg max-w-[60ch] mx-auto">
+                        We turn theory into practice.
+                    </p>
+                </motion.div>
+            </div>
+            <div className="w-[80%] mx-auto flex flex-wrap flex-col lg:flex-row justify-center gap-8">
                 {whyUsItems.map(({ title, text, icon }) => (
                     <div
                         key={title}
-                        className="bg-white/2 backdrop-blur-md border border-white/5 rounded-3xl p-6 flex flex-col items-start gap-4 w-[20%] transition"
+                        className="bg-white/2 backdrop-blur-md border border-white/5 rounded-3xl p-6 flex flex-col items-start gap-4 w-full lg:w-[20%] transition"
                     >
                         <div className="text-white">{icon}</div>
                         <h3 className="font-bold text-xl">{title}</h3>
@@ -42,6 +55,7 @@ export default function WhyUs() {
                     </div>
                 ))}
             </div>
+
         </section>
     );
 }

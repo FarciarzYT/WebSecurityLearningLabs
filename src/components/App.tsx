@@ -5,6 +5,7 @@ import NewLabs from './landingComponents/NewLabs.tsx';
 import {AnimatedBackground} from "./landingComponents/AnimatedBackground.tsx";
 import UserCounter from "./landingComponents/UserCounter.tsx";
 import WhyUs from "./landingComponents/WhyUs.tsx";
+import Features from "./landingComponents/Features.tsx"
 import Footer from "./Base/Footer.tsx"
 function App() {
   return (
@@ -13,9 +14,11 @@ function App() {
         <Navbar />
         <Hero />
         <CtaWhiteBox />
-        <UserCounter />
+        <Features />
         <WhyUs />
+
         <NewLabs />
+        <UserCounter />
         <Footer />
     </>
   )

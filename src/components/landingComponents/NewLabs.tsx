@@ -6,6 +6,7 @@ import {
     FaDatabase,
     FaCode,
 } from "react-icons/fa6";
+import {motion} from "motion/react";
 
 
 const labsItems = [
@@ -39,12 +40,26 @@ export default function NewLabs() {
     return (
         <section className="mt-32 mb-32" aria-labelledby="labs-heading">
             <header>
-                <h2
-                    id="labs-heading"
-                    className="text-center mb-16 text-[2.5rem] font-bold"
-                >
-                    Your Journey Starts Now
-                </h2>
+                <div className="mx-auto max-w-6xl">
+                    <motion.div
+                        className="text-center mb-16"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6 }}
+                    >
+          <span className="font-mono text-sm text-primary tracking-widest uppercase">
+            {"// don't wait, act"}
+          </span>
+                        <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground text-balance">
+                           Your Hacker Career Starts Now
+                        </h2>
+                        <p className="mt-4 text-muted-foreground text-lg max-w-[60ch] mx-auto">
+                            Each module is designed to teach you by doing. Attack, analyze,
+                            defend, repeat.
+                        </p>
+                    </motion.div>
+                </div>
             </header>
 
             <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
