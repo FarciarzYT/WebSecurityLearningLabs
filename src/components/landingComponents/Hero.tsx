@@ -72,7 +72,7 @@ export default function Hero() {
                 transition={{ duration: 0.7, delay: 0.45 }}
             >
                 <a href="">
-                    <div className="flex items-center gap-2 font-bold bg-white hover:bg-white/85 border-2 border-solid text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full transform hover:-translate-y-1 hover:translate-x-1 transition duration-300
+                    <div className="flex items-center gap-2 font-bold bg-white hover:bg-white/85 border-2 border-solid text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full transform hover:-translate-y-1 hover:translate-x-0.5
 ">
                         <LuBookOpenText aria-hidden className="w-5 sm:w-6 h-5 sm:h-6" />
                         <span>Explore</span>
@@ -84,7 +84,7 @@ export default function Hero() {
                     target="_blank"
                     rel="nofollow noopener noreferrer"
                 >
-                    <div className="backdrop-blur-md bg-white/2 flex items-center gap-2 font-bold border-2 border-border text-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-full transform hover:-translate-y-1 hover:translate-x-1 transition duration-300 ">
+                    <div className="backdrop-blur-md bg-white/2 flex items-center gap-2 font-bold border-2 border-border text-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-full transform hover:-translate-y-1 hover:translate-x-0.5 transition duration-300 ">
                         <FaGithub aria-hidden className="w-5 sm:w-6 h-5 sm:h-6" />
                         <span>GitHub</span>
                     </div>

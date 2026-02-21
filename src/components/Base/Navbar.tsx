@@ -25,7 +25,7 @@ const navItems: NavItem[] = [
     {
         icon: <IoTerminalOutline size={24} strokeWidth={1.25} />,
         label: "Dashboard",
-        href: "/",
+        href: "/Dashboard",
         subItems: [
             { label: "Overview", description: "System status & metrics", href: "/" },
             { label: "Threat Monitor", description: "Real-time threat feeds", href: "/" },
@@ -122,7 +122,7 @@ export function Navbar() {
                                     onMouseEnter={() => handleMouseEnter(index)}
                                     onMouseLeave={handleMouseLeave}
                                 >
-                                    <div className="bg-white/4 backdrop-blur-2xl border border-white/8 rounded-2xl shadow-2xl overflow-hidden p-2">
+                                    <div className="bg-white/4 backdrop-blur-2xl border border-white/8 rounded-3xl shadow-2xl overflow-hidden p-2">
                                         <div className="px-3 pt-2 pb-1">
                                             <p className="text-[0.65rem] uppercase tracking-[0.2em] text-white/30 font-medium">
                                                 {label}
@@ -133,8 +133,9 @@ export function Navbar() {
                                                 <a
                                                     key={sub.label}
                                                     href={sub.href}
-                                                    className="flex flex-col gap-0.5 px-3 py-2.5 rounded-xl text-white/60 hover:text-white hover:bg-white/2  transition-all duration-150 group"
+                                                    className="flex flex-col gap-0.5 px-3 py-2.5 rounded-3xl text-white/60 hover:text-white hover:bg-white/2  transition-all duration-150 group"
                                                 >
+
                                                     <span className="text-sm font-normal tracking-wide">{sub.label}</span>
                                                     <span className="text-[0.7rem] text-white/25 group-hover:text-white/40 transition-colors duration-150 font-light">
                             {sub.description}
@@ -152,7 +153,7 @@ export function Navbar() {
                         {!isLoggedIn && (
                             <a
                                 href="/signup"
-                                className="font-bold text-[0.75rem] tracking-[0.12em] uppercase text-black bg-white hover:bg-white/85 px-5 py-2 rounded-full transition-all duration-200 hover:-translate-y-px shadow-lg"
+                                className="font-bold text-[0.75rem] tracking-[0.12em] uppercase text-black bg-white hover:bg-white/85 hover:-translate-y-1 hover:translate-x-0.5  px-5 py-2 rounded-full transition-all duration-200  shadow-lg"
                             >
                                 Sign up
                             </a>
