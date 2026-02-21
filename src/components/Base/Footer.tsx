@@ -8,7 +8,6 @@ export default function Footer() {
             links: [
                 { label: "Labs", href: "/labs" },
                 { label: "Leaderboard", href: "/leaderboard" },
-                { label: "Pricing", href: "/pricing" },
                 { label: "Roadmap", href: "/roadmap" },
             ],
         },
@@ -46,7 +45,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="relative bg-white/2 border-t border-white/10 mt-32 overflow-hidden">
+        <footer className="relative bg-white/2 border-t border-white/10 mt-32 overflow-hidden backdrop-blur-sm">
             <div className="w-[85%] mx-auto py-20 grid grid-cols-1 lg:grid-cols-4 gap-16">
 
                 {/* LEFT CTA SECTION */}
@@ -88,7 +87,7 @@ export default function Footer() {
                     </section>
                 ))}
                 <div className="absolute bottom-12 right-0 pointer-events-none select-none">
-                    <h1 className="text-[6vw] font-black text-white/5 leading-none whitespace-nowrap">
+                    <h1 className="text-[6vw] font-black text-white/5 leading-none whitespace-nowrap hidden sm:block">
                         Web Security Learning Labs
                     </h1>
                 </div>

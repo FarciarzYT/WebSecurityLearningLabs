@@ -40,7 +40,7 @@ export default function Hero() {
                     target="_blank"
                     rel="nofollow noopener noreferrer "
                 >
-                    <div className="flex items-center gap-2 font-bold border-2 border-solid px-6 py-3 rounded-full transform hover:-translate-y-2 transition duration-300  ">
+                    <div className=" backdrop-blur-md flex items-center gap-2 font-bold border-2 border-solid px-6 py-3 rounded-full transform hover:-translate-y-2 transition duration-300  ">
                         <FaGithub aria-hidden className="w-6 h-6" />
                         <span>GitHub</span>
                     </div>
