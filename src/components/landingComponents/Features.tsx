@@ -13,9 +13,9 @@ const features = [
     },
     {
         icon: LuTerminal,
-        title: "Attack Strategy",
+        title: "Attack Strategies",
         description:
-            "Learn how to plan, execute, and destroy systems, applying real-world security techniques.",
+            "Learn how to plan, execute, and hack systems, applying real-world security techniques.",
     },
     {
         icon: LuShield,
@@ -45,7 +45,7 @@ export default function Features() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6 }}
                 >
-          <span className="font-mono text-sm text-primary tracking-widest uppercase">
+          <span className="font-mono text-[0.67rem] sm:text-sm text-primary tracking-widest uppercase">
             {"// what you'll learn"}
           </span>
                     <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground text-balance">

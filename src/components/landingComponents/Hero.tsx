@@ -43,7 +43,7 @@ export default function Hero() {
                 </motion.h1>
 
                 <motion.p
-                    className="m-0 mt-4 text-[clamp(0.8rem,2.5vw,1.5rem)] italic font-light leading-relaxed max-w-[50ch] mx-auto text-muted-foreground"
+                    className="m-0 mt-4 text-[clamp(1rem,2.5vw,1.5rem)] italic font-light leading-relaxed max-w-[50ch] mx-auto text-muted-foreground"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.3 }}
