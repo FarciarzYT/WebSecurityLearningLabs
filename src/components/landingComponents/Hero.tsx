@@ -23,16 +23,18 @@ export default function Hero() {
             </div>
 
             <div className="relative z-10">
+                <div className="bg-white/2 border border-white/10 backdrop-blur-md w-32 h-32 sm:w-48 sm:h-48 rounded-full mx-auto mb-6 ">
                 <motion.div
-                    className="flex justify-center mb-6"
+                    className="flex justify-center "
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.7 }}
                 >
-                    <div className="relative w-24 h-24 sm:w-48 sm:h-48 rounded-full backdrop-blur-md bg-white/2 p-4 sm:p-5 shadow shadow-white">
+                    <div className="relative  p-4 sm:p-5 w-32 h-32 sm:w-48 sm:h-48">
                         <img src="/img/minimalist-fox-hacker-logo.svg" alt="logo" />
                     </div>
                 </motion.div>
+                </div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -54,7 +56,7 @@ export default function Hero() {
                 </motion.h1>
 
                 <motion.p
-                    className="m-0 mt-4 text-[clamp(1rem,2.5vw,1.5rem)] italic font-light leading-relaxed max-w-[50ch] mx-auto text-muted-foreground"
+                    className="m-0 mt-4 text-[clamp(1.25rem,2.5vw,1.5rem)] font-light leading-relaxed max-w-[50ch] mx-auto text-muted-foreground"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.3 }}
@@ -82,7 +84,7 @@ export default function Hero() {
                     target="_blank"
                     rel="nofollow noopener noreferrer"
                 >
-                    <div className="backdrop-blur-md flex items-center gap-2 font-bold border-2 border-border text-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-full transform hover:-translate-y-1 sm:hover:-translate-y-2 transition duration-300 hover:border-primary/50 hover:shadow-[0_0_24px_rgba(74,222,128,0.15)]">
+                    <div className="backdrop-blur-md bg-white/2 flex items-center gap-2 font-bold border-2 border-border text-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-full transform hover:-translate-y-1 sm:hover:-translate-y-2 transition duration-300 ">
                         <FaGithub aria-hidden className="w-5 sm:w-6 h-5 sm:h-6" />
                         <span>GitHub</span>
                     </div>

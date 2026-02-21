@@ -1,30 +1,31 @@
 "use client";
 
 import { motion } from "motion/react";
-import { LuShield, LuBug,LuTerminal, LuLock } from "react-icons/lu";
+import { FaMagnifyingGlassPlus,FaBomb,FaBrain } from "react-icons/fa6";
+import {FaShieldAlt} from "react-icons/fa";
 
 const features = [
 
     {
-        icon: LuBug,
+        icon: FaMagnifyingGlassPlus,
         title: "Vulnerability Analysis",
         description:
             "Understand how common vulnerabilities like XSS, CSRF, and SQL injection actually work under the hood.",
     },
     {
-        icon: LuTerminal,
+        icon: FaBomb,
         title: "Attack Strategies",
         description:
             "Learn how to plan, execute, and hack systems, applying real-world security techniques.",
     },
     {
-        icon: LuShield,
+        icon: FaShieldAlt,
         title: "Defense Strategies",
         description:
             "Learn proven techniques to secure web applications against the most prevalent attack vectors.",
     },
     {
-        icon: LuLock,
+        icon: FaBrain,
         title: "Security Mindset",
         description:
             "Develop the adversarial thinking needed to identify and mitigate threats before they become exploits.",
@@ -35,7 +36,7 @@ export default function Features() {
     return (
         <section
             id="explore"
-            className="relative w-full px-4 pt-32"
+            className="relative w-full px-8 pt-32"
         >
             <div className="mx-auto max-w-6xl">
                 <motion.div
@@ -61,13 +62,13 @@ export default function Features() {
                     {features.map((feature, i) => (
                         <motion.div
                             key={feature.title}
-                            className="group relative border-white/10 bg-white/2 backdrop-blur-md  rounded-xl border border-border bg-card p-6 sm:p-8 transition-colors"
+                            className="group relative border-white/10 bg-white/2 backdrop-blur-md rounded-3xl border border-border bg-card p-6 sm:p-8 transition-colors"
                             initial={{ opacity: 0, y: 24 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-80px" }}
                             transition={{ duration: 0.5, delay: i * 0.1 }}
                         >
-                            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
+                            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-white transition-colors">
                                 <feature.icon className="h-6 w-6" />
                             </div>
                             <h3 className="text-xl font-bold text-foreground">

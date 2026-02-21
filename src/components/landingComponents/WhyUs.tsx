@@ -36,7 +36,7 @@ export default function WhyUs() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground text-balance">
-                        Why Choose Us
+                        What You Get
                     </h2>
                     <p className="mt-4 text-muted-foreground text-lg max-w-[60ch] mx-auto">
                         We turn theory into practice.

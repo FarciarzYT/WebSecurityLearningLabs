@@ -28,7 +28,6 @@ const BASE_IMAGES: ImageData[] = [
     { src: '/img/raccoon-bottom-left.svg', alt: 'cute-raccoon' },
     { src: '/img/raccoon-bottom-right.svg', alt: 'cute-raccoon' },
     { src: '/img/raccoon-middle-center.svg', alt: 'cute-raccoon' },
-    { src: '/img/raccoon-middle-left.svg', alt: 'cute-raccoon' },
     { src: '/img/raccoon-top-center.svg', alt: 'cute-raccoon' },
     { src: '/img/raccoon-top-left.svg', alt: 'cute-raccoon' },
     { src: '/img/raccoon-top-right.svg', alt: 'cute-raccoon' },

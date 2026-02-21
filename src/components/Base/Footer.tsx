@@ -46,7 +46,7 @@ export default function Footer() {
 
     return (
         <footer className="relative bg-white/2 border-t border-white/10 mt-32 overflow-hidden backdrop-blur-sm">
-            <div className="w-[85%] mx-auto py-20 grid grid-cols-1 lg:grid-cols-4 gap-16">
+            <div className="w-[85%] mx-auto py-20 grid grid-cols-1 lg:grid-cols-2 gap-16">
 
                 {/* LEFT CTA SECTION */}
                 <section className="lg:col-span-1">
@@ -55,19 +55,26 @@ export default function Footer() {
                         <h2 className="text-2xl font-bold">Stay Updated</h2>
                     </div>
 
-                    <p className="text-white/70 mb-6 leading-relaxed">
+                    <p className="text-white/85 mb-6 leading-relaxed">
                         Get updates about new labs, vulnerabilities and security concepts.
                         No spam. Just useful stuff.
                     </p>
 
-                    <button className="bg-white text-black px-5 py-2 rounded-xl font-semibold hover:bg-white/90 transition">
-                        Receive Updates
-                    </button>
+
+                    <div className="flex flex-col items-center gap-3 mb-6 ">
+                        <input type="email" placeholder={"email@gmail.com"} className={"font-semibold transition px-4 py-2 border-white/10 mr-auto border w-48 bg-white/2 rounded-xl"}></input>
+                        <button className="bg-white text-black px-6 py-2 rounded-xl font-semibold mr-auto hover:bg-white/90 transition cursor-pointer w-48">
+                            Receive Updates
+                        </button>
+                    </div>
+
+
                 </section>
 
+                <div className={"w-[85%] mx-auto py-20 grid grid-cols-1 lg:grid-cols-3 gap-16"}>
                 {/* DYNAMIC LINKS */}
                 {footerSections.map((section) => (
-                    <section key={section.title}>
+                    <section key={section.title} className={""}>
                         <h3 className="font-semibold mb-4 text-white/90">
                             {section.title}
                         </h3>
@@ -86,6 +93,8 @@ export default function Footer() {
                         </ul>
                     </section>
                 ))}
+                </div>
+
                 <div className="absolute bottom-12 right-0 pointer-events-none select-none">
                     <h1 className="text-[6vw] font-black text-white/5 leading-none whitespace-nowrap hidden sm:block">
                         Web Security Learning Labs
@@ -94,8 +103,8 @@ export default function Footer() {
             </div>
 
 
-            <div className="border-t border-white/2 py-6 pt-4">
-                <div className="w-[85%] mx-auto flex flex-col md:flex-row justify-between items-center text-white/50 text-sm gap-4">
+            <div className="border-t border-white/2 py-6 pt-4 mx-8">
+                <div className="w-full mx-auto flex flex-col md:flex-row justify-between items-center text-white/50 text-sm gap-4">
                     <span>
                         © {new Date().getFullYear()} FarciarzYT. All rights reserved.
                     </span>

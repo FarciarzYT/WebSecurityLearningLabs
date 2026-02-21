@@ -13,12 +13,13 @@ const LabsItems = [
 export default function UserCounter() {
     return (
         <section aria-labelledby="stats-heading" className="mt-16 mb-16">
-            <h2 id="stats-heading" className="text-center font-bold text-[2.5rem] mb-5" >
+            <h2 id="stats-heading" className="text-center font-extrabold text-3xl mb-6" >
                Stats
             </h2>
-            <dl  className="flex flex-row  justify-center mx-auto w-[30%] gap-6">
+            <div className="flex flex-wrap items-center justify-center w-96 mx-auto">
+            <dl  className="flex flex-col gap-6 sm:flex-row ">
             {LabsItems.map(({title, icon, value}) => (
-                    <div key={title} className="bg-backcard-100 rounded-lg sm:p-8 flex items-center gap-3 ">
+                    <div key={title} className="bg-backcard-100 rounded-lg sm:p-8 flex gap-3 ">
                         <div className="">
                             {icon}
                         </div>
@@ -33,6 +34,7 @@ export default function UserCounter() {
                     </div>
             ))}
             </dl>
+            </div>
         </section>
     );
 }
