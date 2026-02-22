@@ -9,16 +9,16 @@ import WhyUs from "@/components/landingComponents/WhyUs";
 import UserCounter from "@/components/landingComponents/UserCounter";
 
 export default function App() {
-  return (
-      <>
-        <AnimatedBackground/>
-        <Navbar />
-        <Hero />
-        <Features />
-        <WhyUs />
-        <NewLabs />
-        <UserCounter />
-        <Footer />
-      </>
-  )
+    return (
+        <>
+            <AnimatedBackground/>
+            <Navbar />
+            <Hero />
+            <Features />
+            <WhyUs />
+            <NewLabs />
+            <UserCounter />
+            <Footer />
+        </>
+    )
 }
