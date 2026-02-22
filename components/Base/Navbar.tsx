@@ -25,7 +25,7 @@ const navItems: NavItem[] = [
     {
         icon: <IoTerminalOutline size={24} strokeWidth={1.25} />,
         label: "Dashboard",
-        href: "/Dashboard",
+        href: "/dashboard",
         subItems: [
             { label: "Overview", description: "System status & metrics", href: "/" },
             { label: "Threat Monitor", description: "Real-time threat feeds", href: "/" },
