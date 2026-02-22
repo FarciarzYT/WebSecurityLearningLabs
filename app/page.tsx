@@ -13,11 +13,13 @@ export default function App() {
       <>
         <AnimatedBackground/>
         <Navbar />
-        <Hero />
-        <Features />
-        <WhyUs />
-        <NewLabs />
-        <UserCounter />
+          <main>
+            <Hero />
+            <Features />
+            <WhyUs />
+            <NewLabs />
+            <UserCounter />
+          </main>
         <Footer />
       </>
   )

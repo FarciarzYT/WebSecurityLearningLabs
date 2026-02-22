@@ -4,6 +4,7 @@ import { LuBookOpenText } from "react-icons/lu";
 import { FaGithub, FaArrowDown } from "react-icons/fa6";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function Hero() {
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -31,7 +32,11 @@ export default function Hero() {
                     transition={{ duration: 0.7 }}
                 >
                     <div className="relative  p-4 sm:p-5 w-32 h-32 sm:w-48 sm:h-48">
-                        <img src="/img/minimalist-fox-hacker-logo.svg" alt="logo" />
+                        <Image
+                            src="/img/minimalist-fox-hacker-logo.svg"
+                            alt="Logo"
+                            fill
+                        />
                     </div>
                 </motion.div>
                 </div>
