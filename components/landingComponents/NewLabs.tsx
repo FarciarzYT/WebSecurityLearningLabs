@@ -89,7 +89,7 @@ export default function NewLabs() {
                                 </p>
 
                                 <div className="mt-auto">
-                                    <div className="inline-flex items-center gap-2 bg-white hover:bg-white/85 w-fit text-center text-black px-4 py-2 rounded-2xl text-sm font-semibold transition duration-300 hover:translate-x-0.5 hover:-translate-y-1">
+                                    <div className=" px-6 py-3 inline-flex items-center gap-2 bg-white hover:bg-white/85 w-fit text-center text-black  rounded-2xl text-sm font-semibold transition duration-300 hover:translate-x-0.5 hover:-translate-y-1">
                                         {btnIcon}
                                         <span>{btnText}</span>
                                     </div>

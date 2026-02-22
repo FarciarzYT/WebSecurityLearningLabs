@@ -15,7 +15,11 @@ export default function CustomTerminal() {
         'Type "help" to see available commands.',
         '',
     ]);
-    const [hackProgress, setHackProgress] = useState(0);
+
+    useEffect(() => {
+        inputRef.current?.focus({ preventScroll: true });
+    }, []);
+
     const inputRef = useRef<HTMLInputElement>(null);
     const outputRef = useRef<HTMLDivElement>(null);
 
@@ -23,9 +27,8 @@ export default function CustomTerminal() {
         {
             name: 'help',
             description: 'Show available commands',
-            action: () => {
-                return commands.map(cmd => `${cmd.name} - ${cmd.description}`).join('\n');
-            },
+            action: () =>
+                commands.map(cmd => `${cmd.name} - ${cmd.description}`).join('\n'),
         },
         {
             name: 'clear',
@@ -38,30 +41,29 @@ export default function CustomTerminal() {
         {
             name: 'whoami',
             description: 'Display current user',
-            action: () => {
-                return 'cyberninja42 (Security Level: Beginner)';
-            },
+            action: () => 'cyberninja42 (Security Level: Beginner)',
         },
         {
             name: 'scan',
             description: 'Scan target for vulnerabilities',
             action: (args) => {
                 const target = args[0] || 'localhost';
-                return `Scanning ${target}...\n\nFound 3 vulnerabilities:\n- XSS vulnerability on login page\n- Outdated Apache server (2.4.29)\n- Default admin credentials (/admin)`;
+                return `Scanning ${target}...\n\nFound 3 vulnerabilities:
+- XSS vulnerability on login page
+- Outdated Apache server (2.4.29)
+- Default admin credentials (/admin)`;
             },
         },
     ];
 
     const executeCommand = (cmd: string) => {
         const [commandName, ...args] = cmd.trim().split(' ');
-
         const command = commands.find(c => c.name === commandName);
 
-        if (command) {
-            return command.action(args);
-        } else if (commandName) {
+        if (command) return command.action(args);
+        if (commandName)
             return `Command not found: ${commandName}. Type 'help' for available commands.`;
-        }
+
         return '';
     };
 
@@ -70,7 +72,13 @@ export default function CustomTerminal() {
             const cmd = input;
             const result = executeCommand(cmd);
 
-            setOutput(prev => [...prev, `> ${cmd}`, ...(result ? result.split('\n') : []), '']);
+            setOutput(prev => [
+                ...prev,
+                `> ${cmd}`,
+                ...(result ? result.split('\n') : []),
+                '',
+            ]);
+
             setInput('');
         }
     };
@@ -86,23 +94,24 @@ export default function CustomTerminal() {
     }, []);
 
     return (
-        <div className="flex flex-col h-full sm:w-[60%] w-full mx-auto p-8 bg-white/2 border-white/10 backdrop-blur-md rounded-3xl  text-white font-mono text-sm">
+        <div className="relative w-full max-w-3xl mx-auto p-8 border bg-white/2 border-white/10 backdrop-blur-md rounded-3xl text-white font-mono text-sm mb-8">
             <div
                 ref={outputRef}
-                className="flex-1 overflow-y-auto mb-2 whitespace-pre-wrap"
+                className="flex-1 w-full overflow-y-auto mb-2 whitespace-pre-wrap"
             >
                 {output.map((line, i) => (
                     <div key={i}>{line}</div>
                 ))}
             </div>
-            <div className="flex">
+
+            <div className="flex w-full">
                 <span>$&nbsp;</span>
                 <input
                     ref={inputRef}
                     value={input}
                     onChange={e => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="flex-1 bg-transparent border-none outline-none text-white font-mono text-sm"
+                    className="flex-1 w-full bg-transparent border-none outline-none text-white font-mono text-sm"
                 />
             </div>
         </div>
