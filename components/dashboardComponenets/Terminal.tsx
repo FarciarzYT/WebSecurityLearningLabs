@@ -94,22 +94,26 @@ export default function CustomTerminal() {
     }, []);
 
     return (
-        <div className="relative w-full max-w-3xl mx-auto p-8 border bg-white/2 border-white/10 backdrop-blur-md rounded-3xl text-white font-mono text-sm mb-8">
+        <div className="relative w-full max-w-3xl mx-auto p-8 border bg-white/2 border-white/10 backdrop-blur-md rounded-3xl text-white font-mono text-sm mb-8 max-h-[600px] flex flex-col">
+
+            {/* Output container with custom scrollbar */}
             <div
                 ref={outputRef}
-                className="flex-1 w-full overflow-y-auto mb-2 whitespace-pre-wrap"
+                className="flex-1 w-full overflow-y-auto mb-2 whitespace-pre-wrap
+               scrollbar-thin scrollbar-thumb-primary scrollbar-track-white/10"
             >
                 {output.map((line, i) => (
                     <div key={i}>{line}</div>
                 ))}
             </div>
 
-            <div className="flex w-full">
+            {/* Input row */}
+            <div className="flex w-full mt-auto">
                 <span>$&nbsp;</span>
                 <input
                     ref={inputRef}
                     value={input}
-                    onChange={e => setInput(e.target.value)}
+                    onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
                     className="flex-1 w-full bg-transparent border-none outline-none text-white font-mono text-sm"
                 />
