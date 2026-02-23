@@ -1,9 +1,11 @@
 "use client"
 
+import Link from 'next/link';
 import { LuBookOpenText } from "react-icons/lu";
 import { ImLab } from "react-icons/im";
 import { FaRedhat } from "react-icons/fa6";
 import { FaGraduationCap } from "react-icons/fa6";
+
 
 
 import Image from "next/image";
@@ -15,6 +17,7 @@ const articleItems = [
         btnText: "Start Learning",
         icon: <LuBookOpenText aria-hidden />,
         btnIcon:<FaGraduationCap aria-hidden/>,
+        href: "/learn"
     },
     {
         title: "WebSecurityLabs",
@@ -22,6 +25,7 @@ const articleItems = [
         btnText: "Start Hacking",
         icon: <ImLab aria-hidden />,
         btnIcon: <FaRedhat aria-hidden />,
+        href: "/labs"
     }
 ];
 
@@ -60,11 +64,12 @@ export function LearningBox() {
                                         {item.title}
                                     </h3>
                                     <p className={" mb-6"}>{item.description}</p>
-                                    <button
-                                        className={"bg-white items-center text-black sm:text-lg text-sm  px-6 py-3 rounded-3xl font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2"}>
+                                    <Link
+                                        href={item.href}
+                                        className={"bg-white items-center text-black sm:text-lg text-sm w-fit px-6 py-3 rounded-3xl font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2"}>
                                         {item.btnIcon}
                                         {item.btnText}
-                                    </button>
+                                    </Link>
                                 </article>
                             )
                         })}

@@ -7,6 +7,7 @@ import { LuBookOpen } from "react-icons/lu"
 import { IoTerminalOutline } from "react-icons/io5"
 import { PiUserLight } from "react-icons/pi"
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi"
+import Link from "next/link";
 
 type SubItem = {
     label: string
@@ -45,7 +46,7 @@ const navItems: NavItem[] = [
     {
         icon: <TbTargetArrow size={24} strokeWidth={1.25} />,
         label: "Practice",
-        href: "/practice",
+        href: "/labs",
         subItems: [
             { label: "Challenges", description: "Hands-on hacking labs", href: "/practice" },
             { label: "CTF Arena", description: "Compete in live CTFs", href: "/practice" },
@@ -151,23 +152,25 @@ export function Navbar() {
 
                     <div className="flex items-center gap-4 ml-6">
                         {!isLoggedIn && (
-                            <a
+                            <Link
                                 href="/signup"
+                                type="link"
                                 className="font-bold text-[0.75rem] tracking-[0.12em] px-6 py-3 uppercase text-black bg-white hover:bg-white/85 hover:-translate-y-1 hover:translate-x-0.5   rounded-3xl transition-all duration-300  shadow-lg"
                             >
                                 Sign up
-                            </a>
+                            </Link>
                         )}
 
                         <div className="w-px h-6 bg-white/10" />
 
-                        <a
+                        <Link
                             href="/profile"
+                            type="link"
                             className="w-9 h-9 text-white/50 hover:text-white rounded-full border border-white/20 bg-white/4 flex items-center justify-center hover:border-white/50 hover:bg-white/10 transition-all duration-300"
                             aria-label="User profile"
                         >
                             <PiUserLight size={18} strokeWidth={1.25} />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

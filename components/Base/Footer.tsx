@@ -6,9 +6,9 @@ export default function Footer() {
         {
             title: "Platform",
             links: [
+                { label: "Landing", href: "/" },
+                { label: "Learn", href: "/learn" },
                 { label: "Labs", href: "/labs" },
-                { label: "Leaderboard", href: "/leaderboard" },
-                { label: "Roadmap", href: "/roadmap" },
             ],
         },
         {
@@ -16,7 +16,7 @@ export default function Footer() {
             links: [
                 { label: "Docs", href: "/documents" },
                 { label: "Blog", href: "/blog" },
-                { label: "Security", href: "/security" },
+                { label: "Other", href: "/other" },
                 { label: "FAQ", href: "/faq" },
             ],
         },
