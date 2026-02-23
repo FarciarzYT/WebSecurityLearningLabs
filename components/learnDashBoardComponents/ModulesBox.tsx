@@ -29,9 +29,8 @@ function StatusIcon({ status }: { status: "completed" | "current" | "locked" }) 
 
 export default function ModulesBox() {
     return (
-        <section className="bg-white/2 mb-8 border border-white/10 w-full max-w-3xl mx-8 rounded-3xl backdrop-blur-md">
+        <section className="bg-white/2 mb-8 border border-white/10 w-3xl max-w-3xl mx-10 rounded-3xl backdrop-blur-md">
             <div className="p-6">
-                <h4 className="text-white/70 text-xl font-bold">Your Active Course</h4>
 
                 <div className="flex flex-col mt-4 max-w-lg mx-auto">
                     <span className="text-sm text-white/85">current path</span>

@@ -38,7 +38,8 @@ const navItems: NavItem[] = [
         label: "Learn",
         href: "/learn",
         subItems: [
-            { label: "Courses", description: "Structured learning paths", href: "/learn" },
+            { label: "Paths", description: "Structured learning paths", href: "/learn" },
+            { label: "Blog", description: "Discuss with others", href: "/learn" },
             { label: "Writeups", description: "CTF solutions & breakdowns", href: "/learn" },
             { label: "Resources", description: "Tools, cheatsheets & docs", href: "/learn" },
         ],
@@ -48,9 +49,9 @@ const navItems: NavItem[] = [
         label: "Practice",
         href: "/labs",
         subItems: [
-            { label: "Challenges", description: "Hands-on hacking labs", href: "/practice" },
-            { label: "CTF Arena", description: "Compete in live CTFs", href: "/practice" },
-            { label: "Sandbox", description: "Safe environment to test", href: "/practice" },
+            { label: "Challenges", description: "Hands-on hacking labs", href: "/labs" },
+            { label: "CTF Arena", description: "Compete in live CTFs", href: "/labs" },
+            { label: "Sandbox", description: "Safe environment to test", href: "/labs" },
         ],
     },
 ]

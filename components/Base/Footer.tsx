@@ -7,6 +7,7 @@ export default function Footer() {
             title: "Platform",
             links: [
                 { label: "Landing", href: "/" },
+                { label: "Dashboard", href: "/dashboard" },
                 { label: "Learn", href: "/learn" },
                 { label: "Labs", href: "/labs" },
             ],

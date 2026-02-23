@@ -2,6 +2,7 @@ import React from "react";
 import RoomData from "@/types/RoomData";
 
 export default function DifficultyBadge({ difficulty }: { difficulty: RoomData["difficulty"] }) {
+
     const colors: Record<RoomData["difficulty"], string> = {
         Easy: "bg-[#80ff80]/15 text-[#80ff80] border-[#80ff80]/30",
         Medium: "bg-[#ffb380]/15 text-[#ffb380] border-[#ffb380]/30",

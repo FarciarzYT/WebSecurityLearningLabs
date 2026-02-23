@@ -35,7 +35,7 @@ export default function Learn(){
                     <LastActivity room={lastRoom}/>
                 </section>
 
-                <aside className={"flex flex-col "}>
+                <aside className={"lg:flex flex-col hidden  "}>
                     <UserStreak/>
                     <UserLevel/>
                 </aside>
