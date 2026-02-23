@@ -64,12 +64,12 @@ export default function NewLabs() {
                 </div>
             </header>
 
-            <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="mx-auto max-w-6xl flex flex-col lg:flex-row gap-8 justify-center items-center lg:items-stretch">
                 {labsItems.map(
                     ({ title, text, href, icon, btnText, btnIcon }) => (
                         <article
                             key={title}
-                            className="rounded-3xl p-8 backdrop-blur-xl border border-white/10 bg-white/2  transition"
+                            className="rounded-3xl w-sm p-8 backdrop-blur-xl border border-white/10 bg-white/2 transition w-32"
                         >
                             <a
                                 href={href}
@@ -89,7 +89,7 @@ export default function NewLabs() {
                                 </p>
 
                                 <div className="mt-auto">
-                                    <div className=" px-6 py-3 inline-flex items-center gap-2 bg-white hover:bg-white/85 w-fit text-center text-black  rounded-2xl text-sm font-semibold transition duration-300 hover:translate-x-0.5 hover:-translate-y-1">
+                                    <div className=" px-6 py-3 inline-flex items-center gap-2 bg-white hover:bg-white/85 w-fit text-center text-black  rounded-3xl text-sm font-semibold transition duration-300 hover:translate-x-0.5 hover:-translate-y-1">
                                         {btnIcon}
                                         <span>{btnText}</span>
                                     </div>
