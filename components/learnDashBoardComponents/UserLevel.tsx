@@ -67,9 +67,9 @@ function getLevelTier(level: number) {
 }
 
 export default function UserLevel({
-                                      xp = 2340,
-                                      level = 12,
-                                      xpToNext = 3000,
+                                      xp = 0,
+                                      level = 0,
+                                      xpToNext = 1000,
                                   }: UserLevelProps) {
     const tier = getLevelTier(level);
     const xpProgress = Math.round((xp / xpToNext) * 100);

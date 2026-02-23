@@ -6,7 +6,7 @@ interface UserStreakProps {
     streak?: number;
 }
 
-export default function UserStreak({ streak = 100 }: UserStreakProps) {
+export default function UserStreak({ streak = 0 }: UserStreakProps) {
     // Clamp intensity between 0 and 1 based on streak
     const intensity = Math.min(streak / 10, 1);
 
