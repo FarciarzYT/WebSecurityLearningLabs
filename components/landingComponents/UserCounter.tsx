@@ -23,14 +23,14 @@ export default function UserCounter() {
                         <div className="">
                             {icon}
                         </div>
-                        <div>
+                        <dl>
                             <dt className="text-sm text-white/85">
                                 {title}
                             </dt>
                             <dd className="font-bold text-white text-xl">
                                 <NumberFlow transformTiming={{ duration: 200, easing: 'ease-out' }} value={value}/>
                             </dd>
-                        </div>
+                        </dl>
                     </div>
             ))}
             </dl>
