@@ -11,9 +11,9 @@ import UserLevel from "@/components/learnDashBoardComponents/UserLevel";
 
 export default function Learn(){
     const lastRoom: RoomData = {
-        id: "room-001",
+        id: "room-004",
         title: "TCP/IP Fundamentals",
-        category: "Blue Team",
+        category: "MINDSET",
         difficulty: "Medium",
         progress: 70,
         // eslint-disable-next-line react-hooks/purity
@@ -25,18 +25,20 @@ export default function Learn(){
     return (
         <>
             <AnimatedBackground/>
-            <main className={"flex flex-row h-full "}>
-                <SideNavbar/>
+            <main className={"flex flex-row justify-center mt-16"}>
+                <aside>
+                    <SideNavbar/>
+                </aside>
                 <section className={"flex flex-col"}>
                     <ModuleBox/>
                     <ProgressSection/>
                     <LastActivity room={lastRoom}/>
                 </section>
-                <div className={"flex flex-col "}>
-                <UserStreak/>
-                <UserLevel/>
-                </div>
 
+                <aside className={"flex flex-col "}>
+                    <UserStreak/>
+                    <UserLevel/>
+                </aside>
             </main>
             <Footer/>
         </>

@@ -29,7 +29,7 @@ function StatusIcon({ status }: { status: "completed" | "current" | "locked" }) 
 
 export default function ModulesBox() {
     return (
-        <section className="bg-white/[0.02] mb-4 border border-white/10 w-full max-w-3xl mx-auto mt-16 rounded-3xl backdrop-blur-md">
+        <section className="bg-white/2 mb-8 border border-white/10 w-full max-w-3xl mx-8 rounded-3xl backdrop-blur-md">
             <div className="p-6">
                 <h4 className="text-white/70 text-xl font-bold">Your Active Course</h4>
 
@@ -38,28 +38,22 @@ export default function ModulesBox() {
                     <h3 className="text-2xl text-white font-semibold">
                         Intro to network analysis
                     </h3>
-
+                    <div className={"flex flex-row"}>
                     {/* Progress bar */}
                     <div className="mt-5 flex flex-col gap-2">
-                        <div className="flex items-center justify-between text-sm">
-                            <span className="text-white/80 font-medium">
-                                {completedCount}/{modules.length} modules
-                            </span>
-                        </div>
-
                         <span className="text-xs text-white/50 ">
                             {progressPercent}% complete
                         </span>
                     </div>
-
-                    <div className="mt-4">
+                    <div className="ml-8 mt-1">
                         <Link
                             href="/learn"
-                            className="bg-white items-center text-black sm:text-lg text-sm w-fit px-5 py-2.5 rounded-3xl font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2"
+                            className="bg-white items-center text-black sm:text-lg text-sm w-fit px-6 py-1 rounded-3xl font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2"
                         >
                             <FaDoorOpen />
                             Continue
                         </Link>
+                    </div>
                     </div>
                 </div>
 

@@ -44,7 +44,7 @@ export default function WhyUs() {
                     </p>
                 </motion.div>
             </div>
-            <div className="mx-auto flex flex-wrap justify-center gap-10 max-w-6xl">
+            <div className="mx-auto flex flex-wrap justify-center gap-8  max-w-6xl">
                 {whyUsItems.map(({ title, text, icon }) => (
                     <div
                         key={title}

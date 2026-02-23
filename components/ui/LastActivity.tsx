@@ -7,7 +7,7 @@ import Link from "next/link";
 import RoomData from "@/types/RoomData";
 import DifficultyBadge from "@/components/ui/DifficultyBadge";
 import ProgressRing from "@/components/ui/progress-ring";
-import formatDaysAgo from "@/utils/Data";
+
 
 interface LastActivityProps {
     room: RoomData;
@@ -18,10 +18,8 @@ export default function LastActivity({ room }: LastActivityProps) {
     const {
         id,
         title,
-        category,
         difficulty,
         progress,
-        startedAt,
         totalTasks,
         completedTasks,
     } = room;
@@ -45,18 +43,15 @@ export default function LastActivity({ room }: LastActivityProps) {
                             </h3>
 
                             <div className="flex items-center gap-3">
-                <span className="text-sm font-mono text-muted-foreground">
-                  {category}
-                </span>
-                                <span className="text-muted-foreground/40">|</span>
                                 <DifficultyBadge difficulty={difficulty} />
                             </div>
+
                         </div>
 
                         <div className="flex flex-col gap-2">
-              <span className="text-sm font-mono text-muted-foreground">
-                {completedTasks}/{totalTasks} tasks completed
-              </span>
+                            <span className="text-sm font-mono text-muted-foreground">
+                                {completedTasks}/{totalTasks} tasks completed
+                            </span>
 
                             <div className="h-2 w-full rounded-full bg-secondary overflow-hidden">
                                 <div
@@ -65,10 +60,6 @@ export default function LastActivity({ room }: LastActivityProps) {
                                 />
                             </div>
                         </div>
-
-                        <span className="text-sm font-mono text-muted-foreground">
-              Started {formatDaysAgo(startedAt)}
-            </span>
                     </div>
                 </div>
 

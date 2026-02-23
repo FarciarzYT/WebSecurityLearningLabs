@@ -76,7 +76,7 @@ export default function UserLevel({
     const xpRemaining = xpToNext - xp;
 
     return (
-        <div className="bg-white/2 w-sm border border-white/10 rounded-3xl backdrop-blur-md p-5 w-full mb-8">
+        <div className="bg-white/2 w-64 border border-white/10 rounded-3xl backdrop-blur-md p-5 mb-8">
             <div className="flex flex-col items-center gap-3">
                 {/* LuStar icon with tier glow */}
                 <div
