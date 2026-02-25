@@ -44,15 +44,15 @@ export default function WhyUs() {
                     </p>
                 </motion.div>
             </div>
-            <div className="mx-auto flex flex-wrap justify-center gap-8  max-w-6xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
                 {whyUsItems.map(({ title, text, icon }) => (
                     <div
                         key={title}
-                        className="bg-white/2 backdrop-blur-md border border-white/5 rounded-3xl p-6 flex flex-col items-start gap-6 w-[16rem] transition"
+                        className="bg-white/2 backdrop-blur-md border border-white/5 rounded-3xl gap-6 p-8 flex flex-col  transition"
                     >
                         <div className="text-white">{icon}</div>
                         <h3 className="font-bold text-xl">{title}</h3>
-                        <p className="text-white/85 text-[1rem]">{text}</p>
+                        <p className="text-white/85 text-base">{text}</p>
                     </div>
                 ))}
             </div>

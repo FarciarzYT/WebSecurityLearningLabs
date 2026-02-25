@@ -64,12 +64,12 @@ export default function NewLabs() {
                 </div>
             </header>
 
-            <div className="mx-auto max-w-6xl flex flex-col lg:flex-row gap-8 justify-center items-center lg:items-stretch">
+            <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-8 lg:items-stretch ">
                 {labsItems.map(
                     ({ title, text, href, icon, btnText, btnIcon }) => (
                         <article
                             key={title}
-                            className="rounded-3xl w-sm p-8 backdrop-blur-xl border border-white/10 bg-white/2 transition w-32"
+                            className="rounded-3xl backdrop-blur-xl border border-white/10 bg-white/2 transition p-6 sm:p-8"
                         >
                             <a
                                 href={href}
@@ -89,21 +89,15 @@ export default function NewLabs() {
                                 </p>
 
                                 <div className="mt-auto">
-                                    <div className=" px-6 py-3 inline-flex items-center gap-2 bg-white hover:bg-white/85 w-fit text-center text-black  rounded-3xl text-sm font-semibold transition duration-300 hover:translate-x-0.5 hover:-translate-y-1">
+                                    <div className="bg-white items-center text-black sm:text-lg text-sm w-fit px-4 py-2 rounded-3xl font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2">
                                         {btnIcon}
-                                        <span>{btnText}</span>
+                                        <span className={""}>{btnText}</span>
                                     </div>
                                 </div>
                             </a>
                         </article>
                     )
                 )}
-            </div>
-
-            <div className="flex justify-center mt-12 text-white/85 hover:text-white">
-                <a href="#" className="text-sm hover:underline">
-                    See more labs
-                </a>
             </div>
         </section>
     );

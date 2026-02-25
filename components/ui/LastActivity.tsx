@@ -65,7 +65,7 @@ export default function LastActivity({ room }: LastActivityProps) {
 
                 <Link
                     href={`/learn/${id}`}
-                    className="bg-white mt-6 items-center text-black sm:text-lg text-sm w-fit px-5 py-2.5 rounded-3xl font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2"
+                    className="bg-white mt-6 items-center text-black sm:text-lg text-sm w-fit px-4 py-2 rounded-3xl font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2"
                 >
                     <FaDoorOpen />
                     Continue Module

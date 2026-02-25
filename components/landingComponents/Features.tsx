@@ -36,7 +36,7 @@ export default function Features() {
     return (
         <section
             id="explore"
-            className="relative w-full px-8 pt-32"
+            className="relative w-full  pt-32"
         >
             <div className="mx-auto max-w-6xl">
                 <motion.div

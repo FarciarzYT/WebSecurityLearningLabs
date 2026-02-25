@@ -28,7 +28,7 @@ const navItems: NavItem[] = [
         label: "Dashboard",
         href: "/dashboard",
         subItems: [
-            { label: "Overview", description: "System status & metrics", href: "/" },
+            { label: "Overview", description: "User status & metrics", href: "/dashboard" },
             { label: "Threat Monitor", description: "Real-time threat feeds", href: "/" },
             { label: "Activity Log", description: "Recent security events", href: "/" },
         ],
@@ -152,16 +152,6 @@ export function Navbar() {
                     </ul>
 
                     <div className="flex items-center gap-4 ml-6">
-                        {!isLoggedIn && (
-                            <Link
-                                href="/signup"
-                                type="link"
-                                className="font-bold text-[0.75rem] tracking-[0.12em] px-6 py-3 uppercase text-black bg-white hover:bg-white/85 hover:-translate-y-1 hover:translate-x-0.5   rounded-3xl transition-all duration-300  shadow-lg"
-                            >
-                                Sign up
-                            </Link>
-                        )}
-
                         <div className="w-px h-6 bg-white/10" />
 
                         <Link
