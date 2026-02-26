@@ -21,8 +21,8 @@ export default function UserCounter() {
             <dl className="flex items-start justify-center gap-20 flex-wrap">
                 {LabsItems.map(({ title, icon, value }) => (
                     <div key={title} className="flex flex-col items-center gap-2">
-                        <span className="text-white/80 mb-1">{icon}</span>
-                        <dt className="text-sm text-white/60 leading-snug whitespace-pre-line">
+                        <span className="text-white/90 mb-1">{icon}</span>
+                        <dt className="text-sm text-white/85 leading-snug whitespace-pre-line">
                             {title}
                         </dt>
                         <dd className="font-bold text-white text-3xl mt-1">
