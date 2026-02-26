@@ -1,40 +1,39 @@
 import NumberFlow from "@number-flow/react";
 import { ImLab } from "react-icons/im";
-import { FaUser , FaCrosshairs } from "react-icons/fa6";
-
-
+import { FaUser, FaCrosshairs } from "react-icons/fa6";
 
 const LabsItems = [
-    {title: "Labs Available" , icon: <ImLab size={24} strokeWidth={1.25} aria-hidden="true"/>, value: 3},
-    {title: "Users Active" , icon: <FaUser size={24} strokeWidth={1.25} aria-hidden="true"/>, value: 124},
-    {title: "Exploits Completed" , icon: <FaCrosshairs size={24} strokeWidth={1.25} aria-hidden="true" />, value: 624},
-]
+    { title: "Labs\nAvailable", icon: <ImLab size={28} aria-hidden="true" />, value: 3 },
+    { title: "Users\nActive", icon: <FaUser size={28} aria-hidden="true" />, value: 124 },
+    { title: "Exploits\nCompleted", icon: <FaCrosshairs size={28} aria-hidden="true" />, value: 624 },
+];
 
 export default function UserCounter() {
     return (
-        <section aria-labelledby="stats-heading" className="mt-16 mb-16">
-            <h2 id="stats-heading" className="text-center font-extrabold text-3xl mb-6" >
-               Stats
+        <section aria-labelledby="stats-heading" className="mt-16 mb-16 text-center">
+            <h2
+                id="stats-heading"
+                className="font-extrabold text-3xl mb-12 text-white"
+            >
+                Stats
             </h2>
-            <div className="flex flex-wrap items-center justify-center w-96 mx-auto">
-            <dl  className="flex flex-col gap-6 sm:flex-row ">
-            {LabsItems.map(({title, icon, value}) => (
-                    <div key={title} className="bg-backcard-100 rounded-lg sm:p-8 flex gap-3 ">
-                        <div className="">
-                            {icon}
-                        </div>
-                        <dl>
-                            <dt className="text-sm text-white/85">
-                                {title}
-                            </dt>
-                            <dd className="font-bold text-white text-xl">
-                                <NumberFlow transformTiming={{ duration: 200, easing: 'ease-out' }} value={value}/>
-                            </dd>
-                        </dl>
+
+            <dl className="flex items-start justify-center gap-20 flex-wrap">
+                {LabsItems.map(({ title, icon, value }) => (
+                    <div key={title} className="flex flex-col items-center gap-2">
+                        <span className="text-white/80 mb-1">{icon}</span>
+                        <dt className="text-sm text-white/60 leading-snug whitespace-pre-line">
+                            {title}
+                        </dt>
+                        <dd className="font-bold text-white text-3xl mt-1">
+                            <NumberFlow
+                                transformTiming={{ duration: 600, easing: "ease-out" }}
+                                value={value}
+                            />
+                        </dd>
                     </div>
-            ))}
+                ))}
             </dl>
-            </div>
         </section>
     );
 }
