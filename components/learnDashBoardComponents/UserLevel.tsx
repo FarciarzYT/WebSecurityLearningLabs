@@ -76,7 +76,7 @@ export default function UserLevel({
     const xpRemaining = xpToNext - xp;
 
     return (
-        <div className="bg-white/2 w-64 border border-white/10 rounded-3xl backdrop-blur-md p-5 mb-8">
+        <div className="bg-white/2 w-64 border border-white/10 rounded-3xl ml-32 2xl:block hidden backdrop-blur-md p-5 mb-8 ">
             <div className="flex flex-col items-center gap-3">
                 {/* LuStar icon with tier glow */}
                 <div
@@ -104,9 +104,9 @@ export default function UserLevel({
 
                 {/* Level number */}
                 <div className="flex flex-col items-center gap-0.5">
-          <span className="text-xs text-white/40 uppercase tracking-wider font-medium">
-            Level
-          </span>
+                    <span className="text-xs text-white/40 uppercase tracking-wider font-medium">
+                        Rank
+                    </span>
                     <span
                         className="text-3xl font-bold tabular-nums transition-colors duration-500"
                         style={{ color: tier.color }}

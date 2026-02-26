@@ -37,7 +37,7 @@ export default function UserStreak({ streak = 0 }: UserStreakProps) {
         streak >= 30 ? "Unstoppable" : streak >= 7 ? "On Fire" : streak >= 4 ? "Heating Up" : "Building";
 
     return (
-        <div className=" h-fit bg-white/2 border border-white/10 rounded-3xl backdrop-blur-md p-5 ml-auto mb-8 w-64">
+        <div className=" h-fit bg-white/2 border border-white/10 rounded-3xl ml-32 mb-4 2xl:block hidden backdrop-blur-md p-5 w-64">
             <div className="flex flex-col items-center gap-3">
 
                 <div

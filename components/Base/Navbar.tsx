@@ -1,13 +1,16 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import React, { useState, useRef, useEffect } from "react"
 
 import { TbTargetArrow } from "react-icons/tb"
-import { LuBookOpen } from "react-icons/lu"
+import {LuBookOpen, LuBookOpenText} from "react-icons/lu"
 import { IoTerminalOutline } from "react-icons/io5"
 import { PiUserLight } from "react-icons/pi"
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi"
+import {FaArrowRight, FaBookSkull, FaUserPlus} from "react-icons/fa6";
 import Link from "next/link";
+
+/*import Link from "next/link";*/
 
 type SubItem = {
     label: string
@@ -92,7 +95,7 @@ export function Navbar() {
     }
 
     return (
-        <nav ref={navRef} className="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-2xl">
+        <nav ref={navRef} className="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-xl">
             {/* Desktop Navbar */}
             <div className="hidden md:block relative">
                 <div className="relative z-20 flex items-center justify-center bg-white/2 backdrop-blur-xl shadow-2xl rounded-full border border-white/6 px-4 h-16">
@@ -153,7 +156,6 @@ export function Navbar() {
 
                     <div className="flex items-center gap-4 ml-6">
                         <div className="w-px h-6 bg-white/10" />
-
                         <Link
                             href="/profile"
                             type="link"
@@ -172,13 +174,13 @@ export function Navbar() {
                 <div className="flex items-center justify-between bg-white/2 backdrop-blur-xl shadow-2xl rounded-full border border-white/6 px-4 h-14">
                     <span className="text-white/60 text-sm font-light tracking-widest">Web Security Learning Labs</span>
                     <div className="flex items-center gap-3">
-                        <a
+                        <Link
                             href="/profile"
                             className="w-8 h-8 text-white/50 hover:text-white rounded-full border border-white/20 bg-white/4 flex items-center justify-center hover:border-white/50 hover:bg-white/10 transition-all duration-200"
                             aria-label="User profile"
                         >
                             <PiUserLight size={16} strokeWidth={1.25} />
-                        </a>
+                        </Link>
                         <button
                             onClick={() => {
                                 setMobileOpen(!mobileOpen)
@@ -223,10 +225,10 @@ export function Navbar() {
                                             mobileExpanded === index ? "rotate-180" : ""
                                         }`}
                                     >
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M3 4.5L6 7.5L9 4.5" />
-                    </svg>
-                  </span>
+                                        {/*<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                          <path d="M3 4.5L6 7.5L9 4.5" />
+                                        </svg>*/}
+                                      </span>
                                 </button>
 
                                 {/* Sub-items rollout */}
@@ -271,9 +273,10 @@ export function Navbar() {
                             <a
                                 href="/signup"
                                 onClick={() => setMobileOpen(false)}
-                                className="block mx-2 mb-2 font-bold text-[0.7rem] tracking-[0.12em] uppercase text-center text-black bg-white hover:bg-white/85 px-5 py-2.5 rounded-full transition-all duration-200 shadow-lg"
+                                className="flex flex-row justify-center gap-2  mx-2 mb-2 items-center font-bold text-center text-black bg-white hover:bg-white/85 px-5 py-2.5 rounded-full transition-all duration-200 shadow-lg"
                             >
-                                Sign up
+                                <FaUserPlus aria-hidden className="" />
+                                <span>Register</span>
                             </a>
                         )}
                     </div>

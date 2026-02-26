@@ -5,6 +5,7 @@ import { FaGithub, FaArrowDown } from "react-icons/fa6";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -76,23 +77,23 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.45 }}
             >
-                <a href="">
-                    <div className="bg-white items-center text-black sm:text-lg text-sm w-fit px-4 py-2 rounded-3xl font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2">
+                <Link href="">
+                    <div className="bg-white items-center text-black sm:text-lg text-sm w-fit px-6 py-3 rounded-full font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2">
                         <LuBookOpenText aria-hidden className="w-5 sm:w-6 h-5 sm:h-6" />
                         <span>Explore</span>
                     </div>
-                </a>
+                </Link>
 
-                <a
+                <Link
                     href="https://github.com/FarciarzYT/WebSecurityLearningLabs"
                     target="_blank"
                     rel="nofollow noopener noreferrer"
                 >
-                    <div className="bg-white/2 border-2 backdrop-blur-md border-white items-center text-white sm:text-lg text-sm w-fit px-4 py-2 rounded-3xl font-bold hover:bg-black cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2">
+                    <div className="bg-white/2 border-2 backdrop-blur-md border-white items-center text-white sm:text-lg text-sm w-fit px-6 py-3 rounded-full font-bold hover:bg-black cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2">
                         <FaGithub aria-hidden className="w-5 sm:w-6 h-5 sm:h-6" />
                         <span>GitHub</span>
                     </div>
-                </a>
+                </Link>
             </motion.div>
 
             <motion.div

@@ -18,7 +18,7 @@ const defaultCategories: ProgressCategory[] = [
 
 export default function ProgressSection({categories = defaultCategories,}: ProgressHeaderProps) {
     return (
-        <section className="bg-white/2 border border-white/10 w-3xl h-fit mx-10 mb-16 rounded-3xl backdrop-blur-md">
+        <section className="bg-white/2 border w-4xl border-white/10 h-fit mx-10 mb-16 rounded-3xl backdrop-blur-md">
             <div className="flex items-center justify-center gap-16 px-8 py-8">
                 {categories.map((cat) => (
                     <ProgressRing

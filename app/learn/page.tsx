@@ -1,13 +1,14 @@
-import SideNavbar from "@/components/Base/SideNavbar"
-import Footer from "@/components/Base/Footer"
+import AltNavbar from "@/components/Base/AltNavbar"
+import AltFooter from "@/components/Base/AltFooter"
 import {AnimatedBackground} from "@/components/Base/AnimatedBackground";
 
-import ProgressSection from "@/components/learnDashBoardComponents/ProgressSection";
 import ModuleBox from "@/components/learnDashBoardComponents/ModulesBox"
 import RoomData from "@/types/RoomData";
-import LastActivity from "@/components/ui/LastActivity";
 import UserStreak from "@/components/learnDashBoardComponents/UserStreak";
 import UserLevel from "@/components/learnDashBoardComponents/UserLevel";
+import SkillChart from "@/components/learnDashBoardComponents/SkillChart";
+import SuggestedModules from "@/components/learnDashBoardComponents/SuggestedModules";
+import LastActivity from "@/components/learnDashBoardComponents/LastActivity";
 
 export default function Learn(){
     const lastRoom: RoomData = {
@@ -25,22 +26,22 @@ export default function Learn(){
     return (
         <>
             <AnimatedBackground/>
-            <main className={"flex flex-row justify-center mt-16"}>
-                <aside>
-                    <SideNavbar/>
-                </aside>
-                <section className={"flex flex-col"}>
+            <div className="2xl:flex flex-row">
+            <aside className={"flex-col"}>
+                <AltNavbar/>
+                <UserStreak/>
+                <UserLevel/>
+            </aside>
+                <main className="flex flex-col ">
                     <ModuleBox/>
-                    <ProgressSection/>
-                    <LastActivity room={lastRoom}/>
-                </section>
-
-                <aside className={"lg:flex flex-col hidden  "}>
-                    <UserStreak/>
-                    <UserLevel/>
-                </aside>
-            </main>
-            <Footer/>
+                    <div className="2xl:flex flex-row mb-8 gap-8 2xl:min-w-6xl">
+                        <SkillChart/>
+                        <SuggestedModules/>
+                    </div>
+                <LastActivity room={lastRoom}/>
+                </main>
+            </div>
+            <AltFooter/>
         </>
     )
 }

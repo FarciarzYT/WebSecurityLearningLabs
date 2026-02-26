@@ -1,6 +1,6 @@
 
 import {AnimatedBackground} from "@/components/Base/AnimatedBackground";
-import SideNavbar from "@/components/Base/SideNavbar";
+import AltNavbar from "@/components/Base/AltNavbar";
 import ModulesBoxOfModules from "@/components/learnDashBoardComponents/modules/ModulesBoxOfModules"
 import Footer from "@/components/Base/Footer";
 
@@ -12,7 +12,7 @@ export default function modules(){
             <AnimatedBackground/>
             <main className={"flex flex-row justify-center mt-16"}>
                 <aside>
-                    <SideNavbar/>
+                    <AltNavbar/>
                 </aside>
                 <section className={"flex flex-col"}>
                     <ModulesBoxOfModules />

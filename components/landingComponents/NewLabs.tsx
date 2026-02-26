@@ -5,10 +5,12 @@ import {
     FaBug,
     FaKey,
     FaDatabase,
-    FaCode,
+    FaCode, FaBookSkull, FaArrowRight,
 } from "react-icons/fa6";
 
 import {motion} from "motion/react";
+import Link from "next/link";
+import React from "react";
 
 
 const labsItems = [
@@ -71,10 +73,7 @@ export default function NewLabs() {
                             key={title}
                             className="rounded-3xl backdrop-blur-xl border border-white/10 bg-white/2 transition p-6 sm:p-8"
                         >
-                            <a
-                                href={href}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <div
                                 className="flex flex-col h-full outline-none"
                             >
                                 <header className="flex items-center gap-3 mb-4">
@@ -89,12 +88,16 @@ export default function NewLabs() {
                                 </p>
 
                                 <div className="mt-auto">
-                                    <div className="bg-white items-center text-black sm:text-lg text-sm w-fit px-4 py-2 rounded-3xl font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2">
+                                    <Link
+                                        href={href}
+                                        className="flex items-center gap-1.5 text-sm font-semibold text-white/70 hover:text-white w-fit mt-1 transition-colors duration-150 group/link"
+                                    >
                                         {btnIcon}
-                                        <span className={""}>{btnText}</span>
-                                    </div>
+                                        <span>{btnText}</span>
+                                        <FaArrowRight className="text-xs opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-150" />
+                                    </Link>
                                 </div>
-                            </a>
+                            </div>
                         </article>
                     )
                 )}

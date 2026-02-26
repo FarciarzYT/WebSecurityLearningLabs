@@ -4,7 +4,7 @@ import Footer from "@/components/Base/Footer"
 import {AnimatedBackground} from "@/components/Base/AnimatedBackground";
 import {LearningBox} from "@/components/dashboardComponenets/LearningBox"
 import CustomTerminal from "@/components/dashboardComponenets/Terminal"
-import LastActivity from "@/components/ui/LastActivity";
+import LastActivity from "@/components/learnDashBoardComponents/LastActivity";
 
 import RoomData from "@/types/RoomData";
 export default function App() {
