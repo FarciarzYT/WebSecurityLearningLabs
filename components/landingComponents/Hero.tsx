@@ -72,13 +72,13 @@ export default function Hero() {
             </div>
 
             <motion.div
-                className="relative z-10 flex flex-row text-base sm:text-lg font-light gap-3 sm:gap-4"
+                className="z-10 flex flex-row items-center text-base sm:text-lg gap-3 sm:gap-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.45 }}
             >
                 <Link href="">
-                    <div className="bg-white items-center text-black sm:text-lg text-sm w-fit px-6 py-3 rounded-full font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2">
+                    <div className="bg-white items-center border-2 border-white hover:border-white/85 text-black sm:text-lg text-sm w-fit px-6 py-3 rounded-full font-bold hover:bg-white/85 cursor-pointer transition duration-300 hover:translate-x-0.5 hover:-translate-y-1 flex gap-2">
                         <LuBookOpenText aria-hidden className="w-5 sm:w-6 h-5 sm:h-6" />
                         <span>Explore</span>
                     </div>
