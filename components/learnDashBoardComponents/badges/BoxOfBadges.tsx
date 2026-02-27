@@ -39,7 +39,7 @@ export default function BadgesBox() {
                     filtered.map((module) => (
                         <div
                             key={module.id}
-                            className="group flex flex-col p-5 rounded-3xl border border-white/8 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-200 backdrop-blur-md"
+                            className="group flex flex-col p-5 rounded-3xl border border-white/8 bg-white/2 hover:bg-white/5 hover:border-white/20 transition-all duration-200 backdrop-blur-md"
                         >
                             <div className="flex items-start justify-between gap-3 mb-3">
                                 <h3 className="font-semibold text-sm leading-snug text-white/90">{module.name}</h3>
