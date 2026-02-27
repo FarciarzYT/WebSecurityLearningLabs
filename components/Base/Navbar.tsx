@@ -172,7 +172,7 @@ export function Navbar() {
             <div className="md:hidden">
                 {/* Mobile top bar */}
                 <div className="flex items-center justify-between bg-white/2 backdrop-blur-xl shadow-2xl rounded-full border border-white/6 px-4 h-14">
-                    <span className="text-white/60 text-sm font-light tracking-widest">Web Security Learning Labs</span>
+                    <span className="text-white/60 text-[10px] sm:text-sm font-light tracking-widest">Web Security Learning Labs</span>
                     <div className="flex items-center gap-3">
                         <Link
                             href="/profile"

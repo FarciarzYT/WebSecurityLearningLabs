@@ -63,10 +63,10 @@ export default function Footer() {
                     </p>
 
 
-                    <div className="flex flex-row  mb-6 ">
-                        <input type="email" placeholder={"email@gmail.com"} className={"rounded-l-3xl font-semibold transition px-4 py-2 border-white/10  border w-64 bg-white/2 focus:outline-none focus:ring-2 focus:ring-white/10 appearance-none "}></input>
-                        <button className="bg-white rounded-r-3xl text-black py-2 px-1 font-semibold  hover:bg-white/90  cursor-pointer w-8 transition duration-300 transform ">
-                            <LuMail size={24} />
+                    <div className="flex sm:flex-row flex-col  mb-6 gap-6 ">
+                        <input type="email" placeholder={"email@gmail.com"} className={"rounded-2xl font-semibold transition px-4 py-2 border-white/10  border w-64 bg-white/2 focus:outline-none focus:ring-2 focus:ring-white/10 appearance-none "}></input>
+                        <button className="bg-white rounded-2xl text-black py-2.5 px-2 items-center font-semibold  hover:bg-white/90 hover:translate-x-0.5 hover:-translate-y-1  cursor-pointer w-64 sm:w-fit transition duration-300 transform ">
+                            <span className={"items-center flex flex-row gap-2 "}><LuMail size={24} />Subscribe </span>
                         </button>
                     </div>
 

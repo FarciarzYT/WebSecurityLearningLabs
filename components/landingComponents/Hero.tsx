@@ -32,7 +32,7 @@ export default function Hero() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.7 }}
                 >
-                    <div className="relative  p-4 sm:p-5 w-32 h-32 sm:w-48 sm:h-48">
+                    <div className="relative p-4 sm:p-5 w-32 h-32 sm:w-48 sm:h-48">
                         <Image
                             src="/img/minimalist-fox-hacker-logo.svg"
                             alt="Logo"
