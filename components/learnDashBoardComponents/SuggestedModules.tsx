@@ -1,4 +1,4 @@
-import RoomData from "@/types/RoomData";
+import RoomType from "@/types/RoomType";
 import DifficultyBadge from "@/components/ui/DifficultyBadge";
 
 import Link from "next/link";
@@ -7,7 +7,7 @@ import { FaBookSkull, FaArrowRight } from "react-icons/fa6";
 
 const SUGGESTED: {
     title: string
-    difficulty: RoomData["difficulty"]
+    difficulty: RoomType["difficulty"]
     description: string
     slug: string
 }[] = [

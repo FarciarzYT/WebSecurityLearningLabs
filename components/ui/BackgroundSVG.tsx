@@ -1,10 +1,14 @@
 import Image from "next/image";
 
-export default function BackgroundSVG()  {
+type BackgroundSVGProps = {
+    srcImg: string;
+};
+
+export default function BackgroundSVG({ srcImg }: BackgroundSVGProps) {
     return (
         <div className="absolute inset-y-0 right-0 w-[45%] pointer-events-none">
             <Image
-                src="/img/bored-fox-mascot.svg"
+                src={srcImg}
                 alt="Background mascot"
                 fill
                 priority

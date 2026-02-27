@@ -4,13 +4,13 @@ import React from "react";
 import {FaArrowRight, FaDoorOpen} from "react-icons/fa6";
 import BackgroundSVG from "@/components/ui/BackgroundSVG";
 import Link from "next/link";
-import RoomData from "@/types/RoomData";
+import RoomType from "@/types/RoomType";
 import DifficultyBadge from "@/components/ui/DifficultyBadge";
 import ProgressRing from "@/components/ui/progress-ring";
 
 
 interface LastActivityProps {
-    room: RoomData;
+    room: RoomType;
 }
 
 
@@ -31,7 +31,7 @@ export default function LastActivity({ room }: LastActivityProps) {
       </span>
 
             <div className="relative overflow-hidden rounded-3xl border bg-white/2 border-white/10 backdrop-blur-md p-8">
-                <BackgroundSVG />
+                <BackgroundSVG srcImg="/img/bored-fox-mascot.svg"/>
 
                 <div className="relative z-10 flex items-start gap-8">
                     <ProgressRing color="white" label={id} percentage={progress} />

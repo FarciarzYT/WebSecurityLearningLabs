@@ -3,7 +3,7 @@ import AltFooter from "@/components/Base/AltFooter"
 import {AnimatedBackground} from "@/components/Base/AnimatedBackground";
 
 import ModuleBox from "@/components/learnDashBoardComponents/ModulesBox"
-import RoomData from "@/types/RoomData";
+import RoomType from "@/types/RoomType";
 import UserStreak from "@/components/learnDashBoardComponents/UserStreak";
 import UserLevel from "@/components/learnDashBoardComponents/UserLevel";
 import SkillChart from "@/components/learnDashBoardComponents/SkillChart";
@@ -11,11 +11,13 @@ import SuggestedModules from "@/components/learnDashBoardComponents/SuggestedMod
 import LastActivity from "@/components/learnDashBoardComponents/LastActivity";
 
 export default function Learn(){
-    const lastRoom: RoomData = {
+    const lastRoom: RoomType = {
         id: "room-004",
         title: "TCP/IP Fundamentals",
         category: "MINDSET",
         difficulty: "Medium",
+        description: "none",
+        estimatedHours: 17,
         progress: 70,
         // eslint-disable-next-line react-hooks/purity
         startedAt: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000),

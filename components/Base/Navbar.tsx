@@ -41,7 +41,7 @@ const navItems: NavItem[] = [
         label: "Learn",
         href: "/learn",
         subItems: [
-            { label: "Paths", description: "Structured learning paths", href: "/learn" },
+            { label: "PathsData", description: "Structured learning paths", href: "/learn" },
             { label: "Blog", description: "Discuss with others", href: "/learn" },
             { label: "Writeups", description: "CTF solutions & breakdowns", href: "/learn" },
             { label: "Resources", description: "Tools, cheatsheets & docs", href: "/learn" },

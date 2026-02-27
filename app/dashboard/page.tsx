@@ -6,9 +6,9 @@ import {LearningBox} from "@/components/dashboardComponenets/LearningBox"
 import CustomTerminal from "@/components/dashboardComponenets/Terminal"
 import LastActivity from "@/components/learnDashBoardComponents/LastActivity";
 
-import RoomData from "@/types/RoomData";
+import RoomType from "@/types/RoomType";
 export default function App() {
-    const lastRoom: RoomData = {
+    const lastRoom: RoomType = {
         id: "room-001",
         title: "Network Intrusion Analysis",
         category: "Blue Team",

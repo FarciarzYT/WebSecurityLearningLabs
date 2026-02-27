@@ -1,9 +1,9 @@
 import AltNavbar from "@/components/Base/AltNavbar"
-/*import UserStreak from "@/components/learnDashBoardComponents/UserStreak";
-import UserLevel from "@/components/learnDashBoardComponents/UserLevel";*/
+import UserStreak from "@/components/learnDashBoardComponents/UserStreak";
+import UserLevel from "@/components/learnDashBoardComponents/UserLevel";
 import AltFooter from "@/components/Base/AltFooter"
 import {AnimatedBackground} from "@/components/Base/AnimatedBackground";
-import ModulesBoxofModules from "@/components/learnDashBoardComponents/modules/ModulesBoxOfModules"
+import ModulesBoxofModules from "@/components/learnDashBoardComponents/modules/BoxOfModules"
 
 
 export default function Learn(){
@@ -13,10 +13,10 @@ export default function Learn(){
             <div className="2xl:flex flex-row">
                 <aside className={"flex-col"}>
                     <AltNavbar/>
-                    {/*<UserStreak/>
-                    <UserLevel/>*/}
+                    <UserStreak/>
+                    <UserLevel/>
                 </aside>
-                <main className="flex flex-col ">
+                <main className="">
                     <ModulesBoxofModules/>
                 </main>
             </div>

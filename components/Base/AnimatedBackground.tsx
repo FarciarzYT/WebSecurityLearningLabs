@@ -23,14 +23,14 @@ interface AnimatedItem extends AnimationProps {
 }
 
 const BASE_IMAGES: ImageData[] = [
-    { src: "/img/raccoon-bottom-laptop.svg", alt: "cute-raccoon" },
-    { src: "/img/raccoon-bottom-center.svg", alt: "cute-raccoon" },
-    { src: "/img/raccoon-bottom-left.svg", alt: "cute-raccoon" },
-    { src: "/img/raccoon-bottom-right.svg", alt: "cute-raccoon" },
-    { src: "/img/raccoon-middle-center.svg", alt: "cute-raccoon" },
-    { src: "/img/raccoon-top-center.svg", alt: "cute-raccoon" },
-    { src: "/img/raccoon-top-left.svg", alt: "cute-raccoon" },
-    { src: "/img/raccoon-top-right.svg", alt: "cute-raccoon" }
+    { src: "/img/background/raccoon-bottom-laptop.svg", alt: "cute-raccoon" },
+    { src: "/img/background/raccoon-bottom-center.svg", alt: "cute-raccoon" },
+    { src: "/img/background/raccoon-bottom-left.svg", alt: "cute-raccoon" },
+    { src: "/img/background/raccoon-bottom-right.svg", alt: "cute-raccoon" },
+    { src: "/img/background/raccoon-middle-center.svg", alt: "cute-raccoon" },
+    { src: "/img/background/raccoon-top-center.svg", alt: "cute-raccoon" },
+    { src: "/img/background/raccoon-top-left.svg", alt: "cute-raccoon" },
+    { src: "/img/background/raccoon-top-right.svg", alt: "cute-raccoon" }
 ];
 
 function generateItems(width: number, height: number): AnimatedItem[] {
